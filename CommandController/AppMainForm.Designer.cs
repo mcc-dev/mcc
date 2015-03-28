@@ -31,36 +31,43 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppMainForm));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.mcGameMode1 = new CommandController.McGameMode();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.mcTeleport1 = new CommandController.McTeleport();
 			this.tabPage8 = new System.Windows.Forms.TabPage();
-			this.mcEnchant1 = new CommandController.McEnchant();
 			this.tabPage10 = new System.Windows.Forms.TabPage();
-			this.mcEffect1 = new CommandController.McEffect();
 			this.tabPage9 = new System.Windows.Forms.TabPage();
+			this.tabPage15 = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
 			this.tabControl3 = new System.Windows.Forms.TabControl();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
-			this.skList1 = new CommandController.SkList();
 			this.tabPage7 = new System.Windows.Forms.TabPage();
-			this.skTosochu1 = new CommandController.SkTosochu();
 			this.tabPage11 = new System.Windows.Forms.TabPage();
 			this.tabControl4 = new System.Windows.Forms.TabControl();
 			this.tabPage13 = new System.Windows.Forms.TabPage();
-			this.heCommand1 = new CommandController.HeCommand();
 			this.tabPage14 = new System.Windows.Forms.TabPage();
-			this.heDataBase1 = new CommandController.HeDataBase();
 			this.tabPage12 = new System.Windows.Forms.TabPage();
+			this.tabPage16 = new System.Windows.Forms.TabPage();
+			this.tabControl5 = new System.Windows.Forms.TabControl();
+			this.tabPage17 = new System.Windows.Forms.TabPage();
 			this.appMenuFrame1 = new CommandController.AppMenuFrame();
+			this.mcGameMode1 = new CommandController.McGameMode();
+			this.mcTeleport1 = new CommandController.McTeleport();
+			this.mcEnchant1 = new CommandController.McEnchant();
+			this.mcEffect1 = new CommandController.McEffect();
+			this.mcSign1 = new CommandController.McSign();
+			this.skList1 = new CommandController.SkList();
+			this.skTosochu1 = new CommandController.SkTosochu();
+			this.heCommand1 = new CommandController.HeCommand();
+			this.heDataBase1 = new CommandController.HeDataBase();
+			this.dmHttp1 = new CommandController.DmHttp();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			this.tabPage8.SuspendLayout();
 			this.tabPage10.SuspendLayout();
+			this.tabPage15.SuspendLayout();
 			this.tabControl2.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabPage5.SuspendLayout();
@@ -71,6 +78,9 @@
 			this.tabControl4.SuspendLayout();
 			this.tabPage13.SuspendLayout();
 			this.tabPage14.SuspendLayout();
+			this.tabPage16.SuspendLayout();
+			this.tabControl5.SuspendLayout();
+			this.tabPage17.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -80,6 +90,7 @@
 			this.tabControl1.Controls.Add(this.tabPage8);
 			this.tabControl1.Controls.Add(this.tabPage10);
 			this.tabControl1.Controls.Add(this.tabPage9);
+			this.tabControl1.Controls.Add(this.tabPage15);
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
@@ -97,14 +108,6 @@
 			this.tabPage1.Text = "ゲームモード";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
-			// mcGameMode1
-			// 
-			this.mcGameMode1.Location = new System.Drawing.Point(3, 3);
-			this.mcGameMode1.Name = "mcGameMode1";
-			this.mcGameMode1.Size = new System.Drawing.Size(600, 350);
-			this.mcGameMode1.TabIndex = 0;
-			this.mcGameMode1.Load += new System.EventHandler(this.mcGameMode1_Load);
-			// 
 			// tabPage2
 			// 
 			this.tabPage2.Controls.Add(this.mcTeleport1);
@@ -115,14 +118,6 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "テレポート";
 			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// mcTeleport1
-			// 
-			this.mcTeleport1.Location = new System.Drawing.Point(0, 0);
-			this.mcTeleport1.Name = "mcTeleport1";
-			this.mcTeleport1.Size = new System.Drawing.Size(600, 350);
-			this.mcTeleport1.TabIndex = 0;
-			this.mcTeleport1.Load += new System.EventHandler(this.mcTeleport1_Load);
 			// 
 			// tabPage8
 			// 
@@ -135,14 +130,6 @@
 			this.tabPage8.Text = "エンチャント";
 			this.tabPage8.UseVisualStyleBackColor = true;
 			// 
-			// mcEnchant1
-			// 
-			this.mcEnchant1.Location = new System.Drawing.Point(3, 3);
-			this.mcEnchant1.Name = "mcEnchant1";
-			this.mcEnchant1.Size = new System.Drawing.Size(600, 350);
-			this.mcEnchant1.TabIndex = 0;
-			this.mcEnchant1.Load += new System.EventHandler(this.mcEnchant1_Load);
-			// 
 			// tabPage10
 			// 
 			this.tabPage10.Controls.Add(this.mcEffect1);
@@ -152,14 +139,6 @@
 			this.tabPage10.TabIndex = 4;
 			this.tabPage10.Text = "エフェクト";
 			this.tabPage10.UseVisualStyleBackColor = true;
-			// 
-			// mcEffect1
-			// 
-			this.mcEffect1.Location = new System.Drawing.Point(0, 0);
-			this.mcEffect1.Name = "mcEffect1";
-			this.mcEffect1.Size = new System.Drawing.Size(600, 350);
-			this.mcEffect1.TabIndex = 0;
-			this.mcEffect1.Load += new System.EventHandler(this.mcEffect1_Load);
 			// 
 			// tabPage9
 			// 
@@ -171,6 +150,16 @@
 			this.tabPage9.Text = "スコアボード";
 			this.tabPage9.UseVisualStyleBackColor = true;
 			// 
+			// tabPage15
+			// 
+			this.tabPage15.Controls.Add(this.mcSign1);
+			this.tabPage15.Location = new System.Drawing.Point(4, 22);
+			this.tabPage15.Name = "tabPage15";
+			this.tabPage15.Size = new System.Drawing.Size(606, 359);
+			this.tabPage15.TabIndex = 5;
+			this.tabPage15.Text = "看板";
+			this.tabPage15.UseVisualStyleBackColor = true;
+			// 
 			// tabControl2
 			// 
 			this.tabControl2.Controls.Add(this.tabPage3);
@@ -178,6 +167,7 @@
 			this.tabControl2.Controls.Add(this.tabPage5);
 			this.tabControl2.Controls.Add(this.tabPage11);
 			this.tabControl2.Controls.Add(this.tabPage12);
+			this.tabControl2.Controls.Add(this.tabPage16);
 			this.tabControl2.Location = new System.Drawing.Point(2, 29);
 			this.tabControl2.Name = "tabControl2";
 			this.tabControl2.SelectedIndex = 0;
@@ -237,14 +227,6 @@
 			this.tabPage6.Text = "ファイル一覧";
 			this.tabPage6.UseVisualStyleBackColor = true;
 			// 
-			// skList1
-			// 
-			this.skList1.Location = new System.Drawing.Point(0, 0);
-			this.skList1.Name = "skList1";
-			this.skList1.Size = new System.Drawing.Size(600, 350);
-			this.skList1.TabIndex = 0;
-			this.skList1.Load += new System.EventHandler(this.skList1_Load);
-			// 
 			// tabPage7
 			// 
 			this.tabPage7.Controls.Add(this.skTosochu1);
@@ -255,15 +237,6 @@
 			this.tabPage7.TabIndex = 1;
 			this.tabPage7.Text = "逃走中";
 			this.tabPage7.UseVisualStyleBackColor = true;
-			// 
-			// skTosochu1
-			// 
-			this.skTosochu1.Location = new System.Drawing.Point(3, 3);
-			this.skTosochu1.Margin = new System.Windows.Forms.Padding(0);
-			this.skTosochu1.Name = "skTosochu1";
-			this.skTosochu1.Size = new System.Drawing.Size(600, 350);
-			this.skTosochu1.TabIndex = 0;
-			this.skTosochu1.Load += new System.EventHandler(this.skTosochu1_Load);
 			// 
 			// tabPage11
 			// 
@@ -297,14 +270,6 @@
 			this.tabPage13.Text = "操作";
 			this.tabPage13.UseVisualStyleBackColor = true;
 			// 
-			// heCommand1
-			// 
-			this.heCommand1.Location = new System.Drawing.Point(3, 3);
-			this.heCommand1.Name = "heCommand1";
-			this.heCommand1.Size = new System.Drawing.Size(600, 350);
-			this.heCommand1.TabIndex = 0;
-			this.heCommand1.Load += new System.EventHandler(this.heCommand1_Load);
-			// 
 			// tabPage14
 			// 
 			this.tabPage14.Controls.Add(this.heDataBase1);
@@ -316,14 +281,6 @@
 			this.tabPage14.Text = "DB検索";
 			this.tabPage14.UseVisualStyleBackColor = true;
 			// 
-			// heDataBase1
-			// 
-			this.heDataBase1.Location = new System.Drawing.Point(3, 3);
-			this.heDataBase1.Name = "heDataBase1";
-			this.heDataBase1.Size = new System.Drawing.Size(600, 350);
-			this.heDataBase1.TabIndex = 0;
-			this.heDataBase1.Load += new System.EventHandler(this.heDataBase1_Load);
-			// 
 			// tabPage12
 			// 
 			this.tabPage12.Location = new System.Drawing.Point(4, 22);
@@ -334,6 +291,37 @@
 			this.tabPage12.Text = "ShadowAdmin";
 			this.tabPage12.UseVisualStyleBackColor = true;
 			// 
+			// tabPage16
+			// 
+			this.tabPage16.Controls.Add(this.tabControl5);
+			this.tabPage16.Location = new System.Drawing.Point(4, 22);
+			this.tabPage16.Name = "tabPage16";
+			this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage16.Size = new System.Drawing.Size(614, 385);
+			this.tabPage16.TabIndex = 5;
+			this.tabPage16.Text = "Dynmap";
+			this.tabPage16.UseVisualStyleBackColor = true;
+			// 
+			// tabControl5
+			// 
+			this.tabControl5.Controls.Add(this.tabPage17);
+			this.tabControl5.Location = new System.Drawing.Point(0, 0);
+			this.tabControl5.Name = "tabControl5";
+			this.tabControl5.SelectedIndex = 0;
+			this.tabControl5.Size = new System.Drawing.Size(614, 385);
+			this.tabControl5.TabIndex = 0;
+			// 
+			// tabPage17
+			// 
+			this.tabPage17.Controls.Add(this.dmHttp1);
+			this.tabPage17.Location = new System.Drawing.Point(4, 22);
+			this.tabPage17.Name = "tabPage17";
+			this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage17.Size = new System.Drawing.Size(606, 359);
+			this.tabPage17.TabIndex = 0;
+			this.tabPage17.Text = "データ解析";
+			this.tabPage17.UseVisualStyleBackColor = true;
+			// 
 			// appMenuFrame1
 			// 
 			this.appMenuFrame1.AutoSize = true;
@@ -343,6 +331,87 @@
 			this.appMenuFrame1.Size = new System.Drawing.Size(624, 26);
 			this.appMenuFrame1.TabIndex = 4;
 			this.appMenuFrame1.Load += new System.EventHandler(this.appMenuFrame1_Load);
+			// 
+			// mcGameMode1
+			// 
+			this.mcGameMode1.Location = new System.Drawing.Point(3, 3);
+			this.mcGameMode1.Name = "mcGameMode1";
+			this.mcGameMode1.Size = new System.Drawing.Size(600, 350);
+			this.mcGameMode1.TabIndex = 0;
+			this.mcGameMode1.Load += new System.EventHandler(this.mcGameMode1_Load);
+			// 
+			// mcTeleport1
+			// 
+			this.mcTeleport1.Location = new System.Drawing.Point(0, 0);
+			this.mcTeleport1.Name = "mcTeleport1";
+			this.mcTeleport1.Size = new System.Drawing.Size(600, 350);
+			this.mcTeleport1.TabIndex = 0;
+			this.mcTeleport1.Load += new System.EventHandler(this.mcTeleport1_Load);
+			// 
+			// mcEnchant1
+			// 
+			this.mcEnchant1.Location = new System.Drawing.Point(3, 3);
+			this.mcEnchant1.Name = "mcEnchant1";
+			this.mcEnchant1.Size = new System.Drawing.Size(600, 350);
+			this.mcEnchant1.TabIndex = 0;
+			this.mcEnchant1.Load += new System.EventHandler(this.mcEnchant1_Load);
+			// 
+			// mcEffect1
+			// 
+			this.mcEffect1.Location = new System.Drawing.Point(0, 0);
+			this.mcEffect1.Name = "mcEffect1";
+			this.mcEffect1.Size = new System.Drawing.Size(600, 350);
+			this.mcEffect1.TabIndex = 0;
+			this.mcEffect1.Load += new System.EventHandler(this.mcEffect1_Load);
+			// 
+			// mcSign1
+			// 
+			this.mcSign1.Location = new System.Drawing.Point(3, 3);
+			this.mcSign1.Name = "mcSign1";
+			this.mcSign1.Size = new System.Drawing.Size(600, 350);
+			this.mcSign1.TabIndex = 0;
+			this.mcSign1.Load += new System.EventHandler(this.mcSign1_Load);
+			// 
+			// skList1
+			// 
+			this.skList1.Location = new System.Drawing.Point(0, 0);
+			this.skList1.Name = "skList1";
+			this.skList1.Size = new System.Drawing.Size(600, 350);
+			this.skList1.TabIndex = 0;
+			this.skList1.Load += new System.EventHandler(this.skList1_Load);
+			// 
+			// skTosochu1
+			// 
+			this.skTosochu1.Location = new System.Drawing.Point(3, 3);
+			this.skTosochu1.Margin = new System.Windows.Forms.Padding(0);
+			this.skTosochu1.Name = "skTosochu1";
+			this.skTosochu1.Size = new System.Drawing.Size(600, 350);
+			this.skTosochu1.TabIndex = 0;
+			this.skTosochu1.Load += new System.EventHandler(this.skTosochu1_Load);
+			// 
+			// heCommand1
+			// 
+			this.heCommand1.Location = new System.Drawing.Point(3, 3);
+			this.heCommand1.Name = "heCommand1";
+			this.heCommand1.Size = new System.Drawing.Size(600, 350);
+			this.heCommand1.TabIndex = 0;
+			this.heCommand1.Load += new System.EventHandler(this.heCommand1_Load);
+			// 
+			// heDataBase1
+			// 
+			this.heDataBase1.Location = new System.Drawing.Point(3, 3);
+			this.heDataBase1.Name = "heDataBase1";
+			this.heDataBase1.Size = new System.Drawing.Size(600, 350);
+			this.heDataBase1.TabIndex = 0;
+			this.heDataBase1.Load += new System.EventHandler(this.heDataBase1_Load);
+			// 
+			// dmHttp1
+			// 
+			this.dmHttp1.Location = new System.Drawing.Point(3, 3);
+			this.dmHttp1.Name = "dmHttp1";
+			this.dmHttp1.Size = new System.Drawing.Size(600, 350);
+			this.dmHttp1.TabIndex = 0;
+			this.dmHttp1.Load += new System.EventHandler(this.dmHttp1_Load);
 			// 
 			// AppMainForm
 			// 
@@ -360,6 +429,7 @@
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage8.ResumeLayout(false);
 			this.tabPage10.ResumeLayout(false);
+			this.tabPage15.ResumeLayout(false);
 			this.tabControl2.ResumeLayout(false);
 			this.tabPage3.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
@@ -370,6 +440,9 @@
 			this.tabControl4.ResumeLayout(false);
 			this.tabPage13.ResumeLayout(false);
 			this.tabPage14.ResumeLayout(false);
+			this.tabPage16.ResumeLayout(false);
+			this.tabControl5.ResumeLayout(false);
+			this.tabPage17.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -404,6 +477,12 @@
 		private System.Windows.Forms.TabPage tabPage14;
 		private HeCommand heCommand1;
 		private HeDataBase heDataBase1;
+		private System.Windows.Forms.TabPage tabPage15;
+		private McSign mcSign1;
+		private System.Windows.Forms.TabPage tabPage16;
+		private System.Windows.Forms.TabControl tabControl5;
+		private System.Windows.Forms.TabPage tabPage17;
+		private DmHttp dmHttp1;
 	}
 }
 
