@@ -29,6 +29,52 @@ namespace CommandController
 			textBox2.AutoCompleteCustomSource = refForm.autoCompList;
 			dateTimePicker1.CustomFormat = "yyyy-MM-dd,HH:mm:ss";
 			dateTimePicker2.CustomFormat = "yyyy-MM-dd,HH:mm:ss";
+
+			comboBox1.Items.Add("");
+			comboBox1.Items.Add("lava-bucket");
+			comboBox1.Items.Add("water-bucket");
+			comboBox1.Items.Add("item-place");
+			comboBox1.Items.Add("pvp-death");
+			comboBox1.Items.Add("mob-deat");
+			comboBox1.Items.Add("other-death");
+			comboBox1.Items.Add("command");
+			comboBox1.Items.Add("chat");
+			comboBox1.Items.Add("join");
+			comboBox1.Items.Add("quit");
+			comboBox1.Items.Add("door-interact");
+			comboBox1.Items.Add("open-container");
+			comboBox1.Items.Add("container-transaction");
+			comboBox1.Items.Add("item-pickup");
+			comboBox1.Items.Add("item-drop");
+			comboBox1.Items.Add("button");
+			comboBox1.Items.Add("teleport");
+			comboBox1.Items.Add("lever");
+			comboBox1.Items.Add("sign-place");
+			comboBox1.Items.Add("sign-break");
+			comboBox1.Items.Add("item-break");
+			comboBox1.Items.Add("flint-steel");
+			comboBox1.Items.Add("block-place");
+			comboBox1.Items.Add("block-break");
+			comboBox1.Items.Add("block-burn");
+			comboBox1.Items.Add("block-fade");
+			comboBox1.Items.Add("block-form");
+			comboBox1.Items.Add("leaf-decay");
+			comboBox1.Items.Add("mushroom-grow");
+			comboBox1.Items.Add("tree-grow");
+			comboBox1.Items.Add("water-flow");
+			comboBox1.Items.Add("lava-flow");
+			comboBox1.Items.Add("explosion");
+			comboBox1.Items.Add("enderman-pickup");
+			comboBox1.Items.Add("enderman-place");
+			comboBox1.Items.Add("entity-kill");
+			comboBox1.Items.Add("other");
+			comboBox1.Items.Add("spawnmob-egg");
+			comboBox1.Items.Add("herochat");
+			comboBox1.Items.Add("entity-modify");
+			comboBox1.Items.Add("block-inhabit");
+			comboBox1.Items.Add("super-pickaxe");
+			comboBox1.Items.Add("worldedit-place");
+			comboBox1.Items.Add("worldedit-break");
 		}
 
 		private bool fncConfirm(string message)
@@ -352,6 +398,20 @@ namespace CommandController
 		private void button16_Click(object sender, EventArgs e)
 		{
 			dateTimePicker2.Value = DateTime.Now;
+		}
+
+		//検索条件クリア
+		private void button17_Click(object sender, EventArgs e)
+		{
+			textBox2.Text = "";
+			comboBox1.Text = "";
+			textBox4.Text = "";
+			textBox5.Text = "";
+			textBox6.Text = "";
+			textBox7.Text = "";
+			textBox8.Text = "";
+			textBox9.Text = "";
+			checkBox7.Checked = false;
 		}
 
 	}

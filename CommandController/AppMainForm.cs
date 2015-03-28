@@ -45,14 +45,6 @@ namespace CommandController
 
 		private void fncInit()
 		{
-			if (IntPtr.Size == 4)
-			{
-				Console.WriteLine("32ビットで動作しています");
-			}
-			else if (IntPtr.Size == 8)
-			{
-				Console.WriteLine("64ビットで動作しています");
-			}
 			autoCompList = new AutoCompleteStringCollection();
 			//ユーザー名をオートコンプリートに追加
 			foreach (string user in appSettings.UserList)
@@ -237,6 +229,16 @@ namespace CommandController
 		private void heDataBase1_Load(object sender, EventArgs e)
 		{
 			heDataBase1.fncSetRefForm(this);
+		}
+
+		private void mcSign1_Load(object sender, EventArgs e)
+		{
+			mcSign1.fncSetRefForm(this);
+		}
+
+		private void dmHttp1_Load(object sender, EventArgs e)
+		{
+			dmHttp1.fncSetRefForm(this);
 		}
 
 	}
