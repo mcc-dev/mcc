@@ -3,7 +3,6 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
@@ -14,6 +13,9 @@ namespace CommandController
 		//保存先のファイル名
 		public String fileName = @"settings.config";
 		public Settings appSettings = new Settings();
+
+		//データ
+		public AppData appData = new AppData();
 
 		//ユーザIDオートコンプリート
 		public AutoCompleteStringCollection autoCompList;
@@ -45,9 +47,10 @@ namespace CommandController
 
 		private void fncInit()
 		{
+			appData.LoadAll();
 			autoCompList = new AutoCompleteStringCollection();
 			//ユーザー名をオートコンプリートに追加
-			foreach (string user in appSettings.UserList)
+			foreach (string user in appData.user.UserList)
 			{
 				if (!String.IsNullOrEmpty(user) && !autoCompList.Contains(user))
 				{
@@ -61,7 +64,8 @@ namespace CommandController
 			if (!String.IsNullOrEmpty(user) && !this.autoCompList.Contains(user))
 			{
 				this.autoCompList.Add(user);
-				this.appSettings.UserList.Add(user);
+				//this.appSettings.UserList.Add(user);
+				this.appData.user.UserList.Add(user);
 			}
 		}
 
@@ -116,8 +120,6 @@ namespace CommandController
 				if (TargetWindow.fncFindMinecraft())
 				{
 					TargetWindow.fncChatOpen();
-					//Thread.Sleep(50);
-					//SendKeyUtility.SendKeyAsync("^v" + fncGetEnd());
 					//SendKeys.Send("^v" + fncGetEnd());
 					Win32API.keybd_paste();
 					if (appSettings.FlgExcute)
@@ -182,6 +184,8 @@ namespace CommandController
 		//終了時のイベント
 		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 		{
+			//データ保存
+			appData.SaveAll();
 			//設定の保存
 			SaveSettings();
 		}

@@ -62,6 +62,27 @@ namespace CommandController
 			
 		}
 
+		private bool fncConfirm(string message)
+		{
+			//メッセージボックスを表示する
+			DialogResult result = MessageBox.Show(
+				message,
+				"確認",
+				MessageBoxButtons.YesNo);
+
+			//何が選択されたか調べる
+			if (result == DialogResult.Yes)
+			{
+				//「はい」が選択された時
+				return true;
+			}
+			else
+			{
+				//「いいえ」が選択された時
+				return false;
+			}
+		}
+
 		private void button1_Click(object sender, EventArgs e)
 		{
 			string sBaseUrl = textBox1.Text;
@@ -84,6 +105,24 @@ namespace CommandController
 			{
 				listBox1.Items.Add(player.name);
 				refForm.fncAddUser(player.name);
+				if (!String.IsNullOrEmpty(player.world) && !refForm.appData.world.WorldList.Contains(player.world))
+				{
+					refForm.appData.world.WorldList.Add(player.world);
+				}
+
+			}
+		}
+
+		private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+		{
+			string selectPlayer = listBox1.SelectedItem.ToString();
+			string message = selectPlayer + "にテレポートします。よろしいですか？";
+			//確認後実行
+			if (fncConfirm(message))
+			{
+				string strOutput = "";
+				strOutput += "tp " + selectPlayer;
+				refForm.fncExecuteCommand(strOutput);
 			}
 		}
 	}
