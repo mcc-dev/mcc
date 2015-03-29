@@ -60,6 +60,7 @@
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(120, 268);
 			this.listBox1.TabIndex = 2;
+			this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
 			// 
 			// label1
 			// 

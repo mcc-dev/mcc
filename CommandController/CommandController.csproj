@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppData.cs" />
     <Compile Include="AppMenuFrame.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,7 +148,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SendKeyUtility.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SkTosochu.cs">
       <SubType>UserControl</SubType>
