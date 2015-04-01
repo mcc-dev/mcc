@@ -245,5 +245,9 @@ namespace CommandController
 			dmHttp1.fncSetRefForm(this);
 		}
 
+        private void saCommand1_Load(object sender, EventArgs e)
+        {
+            saCommand1.fncSetRefForm(this);
+        }
 	}
 }
