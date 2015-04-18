@@ -86,7 +86,8 @@ namespace CommandController
 		private void button1_Click(object sender, EventArgs e)
 		{
 			string sBaseUrl = textBox1.Text;
-			string sReqUrl = sBaseUrl + "up/world/SSMR/1";
+			//string sReqUrl = sBaseUrl + "up/world/SSMR/1";
+			string sReqUrl = sBaseUrl + "standalone/world/SSMR.json?_=1";
 
 			HttpWebRequest req = (HttpWebRequest)WebRequest.Create(sReqUrl);
 			req.Method = "GET";

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CommandController
@@ -95,7 +96,14 @@ namespace CommandController
 		//ページング実行
 		private void fncHePage(int page)
 		{
-			if (page <= 0) {
+			//マウスポインタの位置を取得する
+			//X座標を取得する
+			int x = Cursor.Position.X;
+			//Y座標を取得する
+			int y = Cursor.Position.Y;
+
+			if (page <= 0)
+			{
 				page = 1;
 			}
 			textBox1.Text = page.ToString();
@@ -103,6 +111,9 @@ namespace CommandController
 			strOutput += "he page " + page;
 			refForm.fncExecuteCommand(strOutput);
 			Win32API.keybd_click(Win32API.VK_DIVIDE);
+
+			//マウスポインタの位置を元に戻す
+			Cursor.Position = new Point(x, y);
 		}
 
 		//ページ文字列を数値に変換、変換できないならデフォルト1

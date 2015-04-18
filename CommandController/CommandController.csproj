@@ -148,6 +148,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaCommand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SaCommand.Designer.cs">
+      <DependentUpon>SaCommand.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="SkTosochu.cs">
       <SubType>UserControl</SubType>
@@ -215,6 +221,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SaCommand.resx">
+      <DependentUpon>SaCommand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SkTosochu.resx">
       <DependentUpon>SkTosochu.cs</DependentUpon>
     </EmbeddedResource>
