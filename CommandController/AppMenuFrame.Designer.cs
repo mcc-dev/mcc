@@ -38,7 +38,7 @@
 			// menuStrip1
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem1});
+			this.ToolStripMenuItem1});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(435, 26);
@@ -48,8 +48,8 @@
 			// ToolStripMenuItem1
 			// 
 			this.ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
+			this.toolStripMenuItem2,
+			this.toolStripMenuItem3});
 			this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
 			this.ToolStripMenuItem1.Size = new System.Drawing.Size(68, 22);
 			this.ToolStripMenuItem1.Text = "メニュー";

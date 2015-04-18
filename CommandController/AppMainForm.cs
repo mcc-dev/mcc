@@ -25,10 +25,10 @@ namespace CommandController
 		const int WM_LBUTTONUP = 0x0202;
 
 		//キーボード情報
-		const int KEYEVENTF_KEYDOWN = 0x0;          // キーを押す
-		const int KEYEVENTF_KEYUP = 0x2;            // キーを離す
-		const int VK_SHIFT = 0x10;                  // SHIFTキー
-		const int VK_MENU = 0x12;                   // ALTキー
+		const int KEYEVENTF_KEYDOWN = 0x0;		  // キーを押す
+		const int KEYEVENTF_KEYUP = 0x2;			// キーを離す
+		const int VK_SHIFT = 0x10;				  // SHIFTキー
+		const int VK_MENU = 0x12;				   // ALTキー
 
 		//マウスイベント
 		[DllImport("user32.dll", CallingConvention = CallingConvention.StdCall)]
@@ -243,6 +243,11 @@ namespace CommandController
 		private void dmHttp1_Load(object sender, EventArgs e)
 		{
 			dmHttp1.fncSetRefForm(this);
+		}
+
+		private void saCommand1_Load(object sender, EventArgs e)
+		{
+			saCommand1.fncSetRefForm(this);
 		}
 
 	}
