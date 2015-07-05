@@ -19,7 +19,43 @@ namespace CommandController
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			//Win32API.keybd_click(Win32API.VK_ESCAPE);
+			if (refForm.appSettings.ExcuteType == 1)
+			{
+				if (TargetWindow.fncFindMinecraft())
+				{
+					Clipboard.SetDataObject(textBox1.Text);
+					Win32API.keybd_paste();
+					Win32API.keybd_click(Win32API.VK_RETURN);
+					Clipboard.SetDataObject(textBox2.Text);
+					Win32API.keybd_paste();
+					Win32API.keybd_click(Win32API.VK_RETURN);
+					Clipboard.SetDataObject(textBox3.Text);
+					Win32API.keybd_paste();
+					Win32API.keybd_click(Win32API.VK_RETURN);
+					Clipboard.SetDataObject(textBox4.Text);
+					Win32API.keybd_paste();
+					Win32API.keybd_click(Win32API.VK_RETURN);
+				}
+			}
+			else if (refForm.appSettings.ExcuteType == 4)
+			{
+				if (TargetWindow.fncFindNotepad())
+				{
+					Clipboard.SetDataObject(textBox1.Text);
+					Win32API.keybd_paste();
+					Win32API.keybd_click(Win32API.VK_RETURN);
+					Clipboard.SetDataObject(textBox2.Text);
+					Win32API.keybd_paste();
+					Win32API.keybd_click(Win32API.VK_RETURN);
+					Clipboard.SetDataObject(textBox3.Text);
+					Win32API.keybd_paste();
+					Win32API.keybd_click(Win32API.VK_RETURN);
+					Clipboard.SetDataObject(textBox4.Text);
+					Win32API.keybd_paste();
+					Win32API.keybd_click(Win32API.VK_RETURN);
+				}
+
+			}
 		}
 
 	}

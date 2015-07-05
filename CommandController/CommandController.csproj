@@ -146,6 +146,12 @@
     <Compile Include="McSign.Designer.cs">
       <DependentUpon>McSign.cs</DependentUpon>
     </Compile>
+    <Compile Include="MvWorldList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MvWorldList.Designer.cs">
+      <DependentUpon>MvWorldList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaCommand.cs">
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="McSign.resx">
       <DependentUpon>McSign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MvWorldList.resx">
+      <DependentUpon>MvWorldList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

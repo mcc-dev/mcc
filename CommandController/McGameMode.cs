@@ -37,6 +37,7 @@ namespace CommandController
 			}
 		}
 
+		//ゲームモード
 		private void button1_Click(object sender, EventArgs e)
 		{
 			if (fncTargetIsEmpty())
@@ -86,6 +87,35 @@ namespace CommandController
 			refForm.fncAddUser(target);
 			string strOutput = "";
 			strOutput += "gamemode 3 " + target;
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		//難易度
+		private void button5_Click(object sender, EventArgs e)
+		{
+			string strOutput = "";
+			strOutput += "difficulty p";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			string strOutput = "";
+			strOutput += "difficulty e";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		private void button7_Click(object sender, EventArgs e)
+		{
+			string strOutput = "";
+			strOutput += "difficulty n";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		private void button8_Click(object sender, EventArgs e)
+		{
+			string strOutput = "";
+			strOutput += "difficulty h";
 			refForm.fncExecuteCommand(strOutput);
 		}
 	}
