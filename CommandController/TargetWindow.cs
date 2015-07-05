@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace CommandController
 {
@@ -45,7 +46,8 @@ namespace CommandController
 					return true;
 				}
 			}
-			Console.WriteLine("not found");
+			//Console.WriteLine("not found");
+			MessageBox.Show("クライアントウィンドウが見つかりません。");
 			return false;
 		}
 
@@ -68,8 +70,8 @@ namespace CommandController
 					return true;
 				}
 			}
-
 			Console.WriteLine("not found");
+			MessageBox.Show("サーバーウィンドウが見つかりません。");
 			return false;
 		}
 
@@ -95,8 +97,8 @@ namespace CommandController
 					return true;
 				}
 			}
-
-			Console.WriteLine("not found");
+			//Console.WriteLine("not found");
+			MessageBox.Show("BukkitGUIが見つかりません。"); 
 			return false;
 		}
 
@@ -119,8 +121,8 @@ namespace CommandController
 					return true;
 				}
 			}
-
-			Console.WriteLine("not found");
+			//Console.WriteLine("not found");
+			MessageBox.Show("メモ帳が見つかりません。"); 
 			return false;
 		}
 

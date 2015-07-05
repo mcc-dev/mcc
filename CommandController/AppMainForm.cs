@@ -164,7 +164,7 @@ namespace CommandController
 					Cursor.Position = new Point(x, y);
 				}
 			}
-			if (appSettings.ExcuteType == 4)
+			else if (appSettings.ExcuteType == 4)
 			{
 				//cmd = "/" + cmd;
 				Clipboard.SetDataObject(cmd);
@@ -248,6 +248,11 @@ namespace CommandController
 		private void saCommand1_Load(object sender, EventArgs e)
 		{
 			saCommand1.fncSetRefForm(this);
+		}
+
+		private void mvWorldList1_Load(object sender, EventArgs e)
+		{
+			mvWorldList1.fncSetRefForm(this);
 		}
 
 	}
