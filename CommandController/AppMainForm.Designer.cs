@@ -39,6 +39,8 @@
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.tabControl6 = new System.Windows.Forms.TabControl();
+			this.tabPage18 = new System.Windows.Forms.TabPage();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
 			this.tabControl3 = new System.Windows.Forms.TabControl();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -51,8 +53,7 @@
 			this.tabPage16 = new System.Windows.Forms.TabPage();
 			this.tabControl5 = new System.Windows.Forms.TabControl();
 			this.tabPage17 = new System.Windows.Forms.TabPage();
-			this.tabControl6 = new System.Windows.Forms.TabControl();
-			this.tabPage18 = new System.Windows.Forms.TabPage();
+			this.tabPage19 = new System.Windows.Forms.TabPage();
 			this.appMenuFrame1 = new CommandController.AppMenuFrame();
 			this.mcGameMode1 = new CommandController.McGameMode();
 			this.mcTeleport1 = new CommandController.McTeleport();
@@ -66,6 +67,7 @@
 			this.heDataBase1 = new CommandController.HeDataBase();
 			this.saCommand1 = new CommandController.SaCommand();
 			this.dmHttp1 = new CommandController.DmHttp();
+			this.skShiensaba1 = new CommandController.SkShiensaba();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -75,6 +77,8 @@
 			this.tabControl2.SuspendLayout();
 			this.tabPage3.SuspendLayout();
 			this.tabPage4.SuspendLayout();
+			this.tabControl6.SuspendLayout();
+			this.tabPage18.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.tabControl3.SuspendLayout();
 			this.tabPage6.SuspendLayout();
@@ -87,8 +91,7 @@
 			this.tabPage16.SuspendLayout();
 			this.tabControl5.SuspendLayout();
 			this.tabPage17.SuspendLayout();
-			this.tabControl6.SuspendLayout();
-			this.tabPage18.SuspendLayout();
+			this.tabPage19.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -204,6 +207,26 @@
 			this.tabPage4.Text = "Multiverse";
 			this.tabPage4.UseVisualStyleBackColor = true;
 			// 
+			// tabControl6
+			// 
+			this.tabControl6.Controls.Add(this.tabPage18);
+			this.tabControl6.Location = new System.Drawing.Point(0, 0);
+			this.tabControl6.Name = "tabControl6";
+			this.tabControl6.SelectedIndex = 0;
+			this.tabControl6.Size = new System.Drawing.Size(614, 385);
+			this.tabControl6.TabIndex = 0;
+			// 
+			// tabPage18
+			// 
+			this.tabPage18.Controls.Add(this.mvWorldList1);
+			this.tabPage18.Location = new System.Drawing.Point(4, 22);
+			this.tabPage18.Name = "tabPage18";
+			this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage18.Size = new System.Drawing.Size(606, 359);
+			this.tabPage18.TabIndex = 0;
+			this.tabPage18.Text = "ワールド一覧";
+			this.tabPage18.UseVisualStyleBackColor = true;
+			// 
 			// tabPage5
 			// 
 			this.tabPage5.Controls.Add(this.tabControl3);
@@ -219,6 +242,7 @@
 			// 
 			this.tabControl3.Controls.Add(this.tabPage6);
 			this.tabControl3.Controls.Add(this.tabPage7);
+			this.tabControl3.Controls.Add(this.tabPage19);
 			this.tabControl3.Location = new System.Drawing.Point(0, 0);
 			this.tabControl3.Name = "tabControl3";
 			this.tabControl3.SelectedIndex = 0;
@@ -244,7 +268,7 @@
 			this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage7.Size = new System.Drawing.Size(606, 359);
 			this.tabPage7.TabIndex = 1;
-			this.tabPage7.Text = "逃走中";
+			this.tabPage7.Text = "逃走中2014";
 			this.tabPage7.UseVisualStyleBackColor = true;
 			// 
 			// tabPage11
@@ -332,25 +356,15 @@
 			this.tabPage17.Text = "データ解析";
 			this.tabPage17.UseVisualStyleBackColor = true;
 			// 
-			// tabControl6
+			// tabPage19
 			// 
-			this.tabControl6.Controls.Add(this.tabPage18);
-			this.tabControl6.Location = new System.Drawing.Point(0, 0);
-			this.tabControl6.Name = "tabControl6";
-			this.tabControl6.SelectedIndex = 0;
-			this.tabControl6.Size = new System.Drawing.Size(614, 385);
-			this.tabControl6.TabIndex = 0;
-			// 
-			// tabPage18
-			// 
-			this.tabPage18.Controls.Add(this.mvWorldList1);
-			this.tabPage18.Location = new System.Drawing.Point(4, 22);
-			this.tabPage18.Name = "tabPage18";
-			this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage18.Size = new System.Drawing.Size(606, 359);
-			this.tabPage18.TabIndex = 0;
-			this.tabPage18.Text = "ワールド一覧";
-			this.tabPage18.UseVisualStyleBackColor = true;
+			this.tabPage19.Controls.Add(this.skShiensaba1);
+			this.tabPage19.Location = new System.Drawing.Point(4, 22);
+			this.tabPage19.Name = "tabPage19";
+			this.tabPage19.Size = new System.Drawing.Size(606, 359);
+			this.tabPage19.TabIndex = 2;
+			this.tabPage19.Text = "支援鯖";
+			this.tabPage19.UseVisualStyleBackColor = true;
 			// 
 			// appMenuFrame1
 			// 
@@ -459,6 +473,14 @@
 			this.dmHttp1.TabIndex = 0;
 			this.dmHttp1.Load += new System.EventHandler(this.dmHttp1_Load);
 			// 
+			// skShiensaba1
+			// 
+			this.skShiensaba1.Location = new System.Drawing.Point(2, 3);
+			this.skShiensaba1.Name = "skShiensaba1";
+			this.skShiensaba1.Size = new System.Drawing.Size(600, 350);
+			this.skShiensaba1.TabIndex = 0;
+			this.skShiensaba1.Load += new System.EventHandler(this.skShiensaba1_Load);
+			// 
 			// AppMainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -479,6 +501,8 @@
 			this.tabControl2.ResumeLayout(false);
 			this.tabPage3.ResumeLayout(false);
 			this.tabPage4.ResumeLayout(false);
+			this.tabControl6.ResumeLayout(false);
+			this.tabPage18.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.tabControl3.ResumeLayout(false);
 			this.tabPage6.ResumeLayout(false);
@@ -491,8 +515,7 @@
 			this.tabPage16.ResumeLayout(false);
 			this.tabControl5.ResumeLayout(false);
 			this.tabPage17.ResumeLayout(false);
-			this.tabControl6.ResumeLayout(false);
-			this.tabPage18.ResumeLayout(false);
+			this.tabPage19.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -537,6 +560,8 @@
 		private System.Windows.Forms.TabControl tabControl6;
 		private System.Windows.Forms.TabPage tabPage18;
 		private MvWorldList mvWorldList1;
+		private System.Windows.Forms.TabPage tabPage19;
+		private SkShiensaba skShiensaba1;
 	}
 }
 

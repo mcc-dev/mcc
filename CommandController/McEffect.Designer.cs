@@ -40,6 +40,7 @@
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.label5 = new System.Windows.Forms.Label();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
+			this.button2 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -153,10 +154,21 @@
 			this.radioButton2.Text = "非表示";
 			this.radioButton2.UseVisualStyleBackColor = true;
 			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(77, 157);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.TabIndex = 12;
+			this.button2.Text = "クリア";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
 			// McEffect
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.button2);
 			this.Controls.Add(this.radioButton2);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.radioButton1);
@@ -191,5 +203,6 @@
 		private System.Windows.Forms.RadioButton radioButton1;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.RadioButton radioButton2;
+		private System.Windows.Forms.Button button2;
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Xml.Serialization;
@@ -26,12 +27,31 @@ namespace CommandController
 			}
 		}
 
+		public class Teleport
+		{
+			public List<BookMark> BookMarkList { get; set; }
+			public Teleport()
+			{
+				BookMarkList = new List<BookMark>();
+			}
+			public class BookMark
+			{
+				public string name { get; set; }
+				public int xPos { get; set; }
+				public int yPos { get; set; }
+				public int zPos { get; set; }
+				public string remark { get; set; }
+			}
+		}
+
 		private string dirPath = @"data";
 		private string pathUser = @"data\user.xml";
 		private string pathWorld = @"data\world.xml";
+		private string pathTeleport = @"data\teleport.xml";
 
 		public User user { get; set; }
 		public World world { get; set; }
+		public Teleport teleport { get; set; }
 
 		public AppData()
 		{
@@ -41,18 +61,21 @@ namespace CommandController
 			}
 			user = new User();
 			world = new World();
+			teleport = new Teleport();
 		}
 
 		public void SaveAll()
 		{
 			SaveData(this.pathUser, this.user);
 			SaveData(this.pathWorld, this.world);
+			SaveData(this.pathTeleport, this.teleport);
 		}
 
 		public void LoadAll()
 		{
 			LoadData(this.pathUser, this.user);
 			LoadData(this.pathWorld, this.world);
+			LoadData(this.pathTeleport, this.teleport);
 		}
 
 		public void SaveData(string fileName, object objData)
@@ -89,6 +112,11 @@ namespace CommandController
 					break;
 				case "World":
 					world = (World)serializer2.Deserialize(sr);
+					break;
+				case "Teleport":
+					teleport = (Teleport)serializer2.Deserialize(sr);
+					break;
+				default:
 					break;
 			}
 			//閉じる

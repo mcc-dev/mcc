@@ -7,7 +7,7 @@ namespace CommandController
 	public partial class SkList : UserControl
 	{
 		private AppMainForm refForm;
-		public String mcDir = @"";
+		public string mcDir = @"";
 
 		public SkList()
 		{
@@ -22,8 +22,8 @@ namespace CommandController
 
 		public void fncGetSkriptList()
 		{
-			checkedListBox1.ItemCheck -= new ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
-			checkedListBox1.Items.Clear();
+			listBox1.Items.Clear();
+			listBox2.Items.Clear();
 
 			string skDir = refForm.appSettings.McDir + @"\plugins\Skript\scripts";
 			if (System.IO.Directory.Exists(skDir))
@@ -31,29 +31,85 @@ namespace CommandController
 				string[] files = Directory.GetFiles(skDir, "*.sk");
 				foreach (string s in files)
 				{
-					String strFileName = Path.GetFileNameWithoutExtension(s);
-					Boolean isChecked = (strFileName.StartsWith("-")) ? false : true;
-					checkedListBox1.Items.Add(strFileName, isChecked);
+					string strFileName = Path.GetFileNameWithoutExtension(s);
+					if (strFileName.StartsWith("-"))
+					{
+						listBox1.Items.Add(strFileName.Substring(1));
+					}
+					else
+					{
+						listBox2.Items.Add(strFileName);
+					}
 				}
+				listBox1.Sorted = true;
+				listBox2.Sorted = true;
 			}
-			checkedListBox1.ItemCheck += new ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
-		}
-
-		private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
-		{
-			String s = this.checkedListBox1.Items[e.Index] as String;
-			if (s.StartsWith("-"))
-			{
-				s = s.Substring(1);
-			}
-			String strOpe = (e.NewValue.ToString() == "Checked") ? "enable" : "disable";
-			String strOutput = "skript " + strOpe + " " + s;
-			refForm.fncExecuteCommand(strOutput);
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
 			fncGetSkriptList();
+		}
+
+		private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+		{
+			string strSelName = listBox1.SelectedItem.ToString();
+			listBox2.Items.Add(strSelName);
+			listBox2.Sorted = true;
+			listBox1.Items.Remove(strSelName);
+			string strOutput = "skript enable " + strSelName;
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		private void listBox2_MouseDoubleClick(object sender, MouseEventArgs e)
+		{
+			string strSelName = listBox2.SelectedItem.ToString();
+			listBox1.Items.Add(strSelName);
+			listBox1.Sorted = true;
+			listBox2.Items.Remove(strSelName);
+			string strOutput = "skript disable " + strSelName;
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		//全て
+		private void button2_Click(object sender, EventArgs e)
+		{
+			string strOutput = "skript reload all";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		//コンフィグ
+		private void button3_Click(object sender, EventArgs e)
+		{
+			string strOutput = "skript reload config";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		//エリアス
+		private void button4_Click(object sender, EventArgs e)
+		{
+			string strOutput = "skript reload aliases";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		//スクリプト(全体)
+		private void button5_Click(object sender, EventArgs e)
+		{
+			string strOutput = "skript reload scripts";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		//スクリプト(単体)
+		private void button6_Click(object sender, EventArgs e)
+		{
+			if (listBox2.SelectedItem == null)
+			{
+				MessageBox.Show("有効中のスクリプトを選択してください。");
+				return;
+			}
+			string strSelName = listBox2.SelectedItem.ToString();
+			string strOutput = "skript reload " + strSelName;
+			refForm.fncExecuteCommand(strOutput);
 		}
 
 	}

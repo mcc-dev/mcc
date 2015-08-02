@@ -140,6 +140,12 @@
     <Compile Include="McEnchant.Designer.cs">
       <DependentUpon>McEnchant.cs</DependentUpon>
     </Compile>
+    <Compile Include="McPositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="McPositionForm.Designer.cs">
+      <DependentUpon>McPositionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="McSign.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,12 @@
       <DependentUpon>SaCommand.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="SkShiensaba.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkShiensaba.Designer.cs">
+      <DependentUpon>SkShiensaba.cs</DependentUpon>
+    </Compile>
     <Compile Include="SkTosochu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +226,9 @@
     <EmbeddedResource Include="McEnchant.resx">
       <DependentUpon>McEnchant.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="McPositionForm.resx">
+      <DependentUpon>McPositionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="McSign.resx">
       <DependentUpon>McSign.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +247,9 @@
     </Compile>
     <EmbeddedResource Include="SaCommand.resx">
       <DependentUpon>SaCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkShiensaba.resx">
+      <DependentUpon>SkShiensaba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SkTosochu.resx">
       <DependentUpon>SkTosochu.cs</DependentUpon>

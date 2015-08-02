@@ -1,3 +1,12 @@
+○0.7.1
+・HawkEye：検索実行後、ページングをリセットするように変更
+・Skript：リロード機能追加
+・Skript：ファイル一覧を有効/無効で振り分けて表示するように変更
+・Skript：支援鯖用コマンド追加(HideMode)
+・Minecraft：コマンドブロック取り出し機能追加
+・Minecraft：テレポート座標の保存機能追加
+・Minecraft：Effectクリアボタン追加
+
 ○0.7.0
 ・Dynmap機能を試験的に追加
 ・ShadowAdmin機能追加
