@@ -186,8 +186,19 @@ namespace CommandController
 				" " + player + 
 				" " + effect + 
 				" " + seconds + 
-				" " + amplifier +
+				" " + amplifier + 
 				" " + hideParticle;
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			string player = textBox1.Text.Trim();
+			String strOutput = "";
+			strOutput +=
+				"effect" + 
+				" " + player + 
+				" " + "clear";
 			refForm.fncExecuteCommand(strOutput);
 		}
 

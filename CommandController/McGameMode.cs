@@ -21,12 +21,26 @@ namespace CommandController
 		private void init()
 		{
 			textBox1.Text = refForm.appSettings.MyID;
+			textBox2.Text = refForm.appSettings.MyID;
 			textBox1.AutoCompleteCustomSource = refForm.autoCompList;
 		}
 
 		private bool fncTargetIsEmpty()
 		{
 			if (textBox1.Text == "")
+			{
+				MessageBox.Show("対象IDを指定してください。");
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		private bool fncTargetIsEmpty2()
+		{
+			if (textBox2.Text == "")
 			{
 				MessageBox.Show("対象IDを指定してください。");
 				return true;
@@ -116,6 +130,33 @@ namespace CommandController
 		{
 			string strOutput = "";
 			strOutput += "difficulty h";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		//コマンドブロック
+		private void button9_Click(object sender, EventArgs e)
+		{
+			if (fncTargetIsEmpty2())
+			{
+				return;
+			}
+			string target = textBox2.Text.Trim();
+			refForm.fncAddUser(target);
+			string strOutput = "";
+			strOutput += "give " + target + " minecraft:command_block";
+			refForm.fncExecuteCommand(strOutput);
+		}
+
+		private void button10_Click(object sender, EventArgs e)
+		{
+			if (fncTargetIsEmpty2())
+			{
+				return;
+			}
+			string target = textBox2.Text.Trim();
+			refForm.fncAddUser(target);
+			string strOutput = "";
+			strOutput += "give " + target + " minecraft:command_block_minecart";
 			refForm.fncExecuteCommand(strOutput);
 		}
 	}

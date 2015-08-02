@@ -284,6 +284,7 @@ namespace CommandController
 			{
 				return;
 			}
+			textBox1.Text = "1";
 			strOutput += "he search" + parameters;
 			refForm.fncExecuteCommand(strOutput);
 			Win32API.keybd_click(Win32API.VK_DIVIDE);

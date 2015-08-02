@@ -255,5 +255,10 @@ namespace CommandController
 			mvWorldList1.fncSetRefForm(this);
 		}
 
+		private void skShiensaba1_Load(object sender, EventArgs e)
+		{
+			skShiensaba1.fncSetRefForm(this);
+		}
+
 	}
 }

@@ -36,12 +36,18 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.button7 = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
+			this.button7 = new System.Windows.Forms.Button();
+			this.button6 = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.button9 = new System.Windows.Forms.Button();
+			this.button10 = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
+			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
+			this.groupBox3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -130,25 +136,15 @@
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "難易度";
 			// 
-			// button5
+			// button8
 			// 
-			this.button5.Location = new System.Drawing.Point(6, 18);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(80, 23);
-			this.button5.TabIndex = 0;
-			this.button5.Text = "ピースフル";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.button5_Click);
-			// 
-			// button6
-			// 
-			this.button6.Location = new System.Drawing.Point(92, 18);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(80, 23);
-			this.button6.TabIndex = 1;
-			this.button6.Text = "イージー";
-			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.button6_Click);
+			this.button8.Location = new System.Drawing.Point(264, 18);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(80, 23);
+			this.button8.TabIndex = 3;
+			this.button8.Text = "ハード";
+			this.button8.UseVisualStyleBackColor = true;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
 			// 
 			// button7
 			// 
@@ -160,20 +156,82 @@
 			this.button7.UseVisualStyleBackColor = true;
 			this.button7.Click += new System.EventHandler(this.button7_Click);
 			// 
-			// button8
+			// button6
 			// 
-			this.button8.Location = new System.Drawing.Point(264, 18);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(80, 23);
-			this.button8.TabIndex = 3;
-			this.button8.Text = "ハード";
-			this.button8.UseVisualStyleBackColor = true;
-			this.button8.Click += new System.EventHandler(this.button8_Click);
+			this.button6.Location = new System.Drawing.Point(92, 18);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(80, 23);
+			this.button6.TabIndex = 1;
+			this.button6.Text = "イージー";
+			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
+			// 
+			// button5
+			// 
+			this.button5.Location = new System.Drawing.Point(6, 18);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(80, 23);
+			this.button5.TabIndex = 0;
+			this.button5.Text = "ピースフル";
+			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
+			// 
+			// groupBox3
+			// 
+			this.groupBox3.Controls.Add(this.label2);
+			this.groupBox3.Controls.Add(this.textBox2);
+			this.groupBox3.Controls.Add(this.button10);
+			this.groupBox3.Controls.Add(this.button9);
+			this.groupBox3.Location = new System.Drawing.Point(4, 147);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(361, 77);
+			this.groupBox3.TabIndex = 8;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "コマンドブロック";
+			// 
+			// button9
+			// 
+			this.button9.Location = new System.Drawing.Point(6, 43);
+			this.button9.Name = "button9";
+			this.button9.Size = new System.Drawing.Size(90, 23);
+			this.button9.TabIndex = 0;
+			this.button9.Text = "コマンドブロック";
+			this.button9.UseVisualStyleBackColor = true;
+			this.button9.Click += new System.EventHandler(this.button9_Click);
+			// 
+			// button10
+			// 
+			this.button10.Location = new System.Drawing.Point(102, 43);
+			this.button10.Name = "button10";
+			this.button10.Size = new System.Drawing.Size(90, 23);
+			this.button10.TabIndex = 1;
+			this.button10.Text = "コマンドトロッコ";
+			this.button10.UseVisualStyleBackColor = true;
+			this.button10.Click += new System.EventHandler(this.button10_Click);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(5, 21);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(46, 12);
+			this.label2.TabIndex = 6;
+			this.label2.Text = "対象ID：";
+			// 
+			// textBox2
+			// 
+			this.textBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.textBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+			this.textBox2.Location = new System.Drawing.Point(57, 18);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(100, 19);
+			this.textBox2.TabIndex = 7;
 			// 
 			// McGameMode
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "McGameMode";
@@ -181,6 +239,8 @@
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
+			this.groupBox3.ResumeLayout(false);
+			this.groupBox3.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -199,5 +259,10 @@
 		private System.Windows.Forms.Button button7;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.Button button10;
+		private System.Windows.Forms.Button button9;
 	}
 }
