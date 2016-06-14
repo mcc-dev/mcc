@@ -116,7 +116,7 @@ namespace MinecraftCommandController
 
 		private void toolStripMenuItem3_Click(object sender, EventArgs e)
 		{
-			AppSettingForm form = new AppSettingForm(settings);
+			AppSettingForm form = new AppSettingForm();
 			form.ShowDialog();
 		}
 

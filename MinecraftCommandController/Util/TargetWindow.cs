@@ -32,14 +32,14 @@ namespace MinecraftCommandController.Util
 			return lProcess;
 		}
 
-		static public Process fncFindTarget(SettingDataEt settings)
+		static public Process fncFindTarget()
 		{
 			bool isFound = false;
 			Process process = null;
 
 			foreach (Process p in Process.GetProcesses())
 			{
-				switch (settings.ExcuteType)
+				switch (SettingAction.ReferSettings().ExcuteType)
 				{
 					case 1:
 						if (p.ProcessName == "java" && 0 <= p.MainWindowTitle.IndexOf("Minecraft 1"))
@@ -69,6 +69,7 @@ namespace MinecraftCommandController.Util
 			return process;
 		}
 
+		/*
 		static public Boolean fncFindMinecraft()
 		{
 			bool isFound = false;
@@ -96,7 +97,9 @@ namespace MinecraftCommandController.Util
 			MessageBox.Show("クライアントウィンドウが見つかりません。");
 			return false;
 		}
+		*/
 
+		/*
 		static public Boolean fncFindMinecraftServer()
 		{
 			bool isFound = false;
@@ -120,7 +123,9 @@ namespace MinecraftCommandController.Util
 			MessageBox.Show("サーバーウィンドウが見つかりません。");
 			return false;
 		}
+		*/
 
+		/*
 		static public Boolean fncFindBukkitGUI()
 		{
 			bool isFound = false;
@@ -147,7 +152,9 @@ namespace MinecraftCommandController.Util
 			MessageBox.Show("BukkitGUIが見つかりません。"); 
 			return false;
 		}
+		*/
 
+		/*
 		static public Boolean fncFindNotepad()
 		{
 			bool isFound = false;
@@ -171,12 +178,14 @@ namespace MinecraftCommandController.Util
 			MessageBox.Show("メモ帳が見つかりません。"); 
 			return false;
 		}
+		*/
 
-		static public void fncActiveTarget(SettingDataEt settings)
+		static public void fncActiveTarget()
 		{
-			Process p = fncFindTarget(settings);
+			Process p = fncFindTarget();
 			if (p == null)
 			{
+				MessageBox.Show("画面が見つかりません。");
 				return;
 			}
 			Win32API.SetForegroundWindow(p.MainWindowHandle);
@@ -195,10 +204,10 @@ namespace MinecraftCommandController.Util
 			Win32API.keybd_click(Win32API.VK_DIVIDE);
 		}
 
-		static public void fncExecuteCommand(string cmd, SettingDataEt settings)
+		static public void fncExecuteCommand(string cmd)
 		{
 			Clipboard.SetDataObject(cmd);
-			switch (settings.ExcuteType)
+			switch (SettingAction.ReferSettings().ExcuteType)
 			{
 				case 1: //クライアント
 					fncCommandOpen();

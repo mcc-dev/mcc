@@ -19,6 +19,7 @@ namespace MinecraftCommandController.Setting
 
 		private void init()
 		{
+			settings = SettingAction.ReferSettings();
 			dicSettingPage = new Dictionary<string, UserControl>();
 
 			//サーバー連携
@@ -31,17 +32,14 @@ namespace MinecraftCommandController.Setting
 		public AppSettingForm(SettingDataEt settings)
 		{
 			InitializeComponent();
-			this.settings = settings;
+			//this.settings = settings;
+			init();
 		}
 
 		//デザイナーからの半自動生成
 		public AppSettingForm() //未使用
 		{
 			InitializeComponent();
-		}
-
-		private void AppSettingForm_Load(object sender, EventArgs e)
-		{
 			init();
 		}
 

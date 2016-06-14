@@ -11,9 +11,10 @@ namespace MinecraftCommandController.Setting
 	static class SettingAction
 	{
 		//保存先のファイル名
-		static public String fileName = @"settings.config";
+		static private String fileName = @"settings.config";
+		static private SettingDataEt settings = new SettingDataEt();
 
-		static public void SaveSettings(SettingDataEt data)
+		static public void SaveSettings()
 		{
 			//＜XMLファイルに書き込む＞
 			//XmlSerializerオブジェクトを作成
@@ -22,17 +23,23 @@ namespace MinecraftCommandController.Setting
 			//ファイルを開く（UTF-8 BOM無し）
 			StreamWriter sw = new StreamWriter(fileName, false, new UTF8Encoding(false));
 			//シリアル化し、XMLファイルに保存する
-			serializer1.Serialize(sw, data);
+			serializer1.Serialize(sw, settings);
 			//閉じる
 			sw.Close();
 		}
 
+		static public void SaveSettings(SettingDataEt data)
+		{
+			settings = data;
+			SaveSettings();
+		}
+
 		static public SettingDataEt LoadSettings()
 		{
-			SettingDataEt data = new SettingDataEt();
+			//SettingDataEt data = new SettingDataEt();
 			if (!File.Exists(fileName))
 			{
-				return data;
+				return settings;
 			}
 			//＜XMLファイルから読み込む＞
 			//XmlSerializerオブジェクトの作成
@@ -40,11 +47,16 @@ namespace MinecraftCommandController.Setting
 			//ファイルを開く
 			StreamReader sr = new StreamReader(fileName, new UTF8Encoding(false));
 			//XMLファイルから読み込み、逆シリアル化する
-			data = (SettingDataEt)serializer2.Deserialize(sr);
+			settings = (SettingDataEt)serializer2.Deserialize(sr);
 			//閉じる
 			sr.Close();
 
-			return data;
+			return settings;
+		}
+
+		static public SettingDataEt ReferSettings()
+		{
+			return settings;
 		}
 
 	}

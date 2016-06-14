@@ -13,29 +13,33 @@ namespace MinecraftCommandController.Setting
 	public partial class PageServer : UserControl
 	{
 		private AppSettingForm settingForm;
+		private SettingDataEt settings;
 
 		private void init()
 		{
-			textBox1.Text = settingForm.settings.McDir;
-			checkBox1.Checked = settingForm.settings.UseServer;
-			textBox2.Text = settingForm.settings.ServerFile;
-			textBox3.Text = settingForm.settings.ServerArg;
-			textBox4.Text = settingForm.settings.JavaDir;
+			settings = SettingAction.ReferSettings();
+			textBox1.Text = settings.McDir;
+			checkBox1.Checked = settings.UseServer;
+			textBox2.Text = settings.ServerFile;
+			textBox3.Text = settings.ServerArg;
+			textBox4.Text = settings.JavaDir;
 		}
 
+		//入力内容を設定エンティティに反映
 		public void fncSetData()
 		{
-			settingForm.settings.McDir = textBox1.Text;
-			settingForm.settings.UseServer = checkBox1.Checked;
-			settingForm.settings.ServerFile = textBox2.Text;
-			settingForm.settings.ServerArg = textBox3.Text;
-			settingForm.settings.JavaDir = textBox4.Text;
+			settings.McDir = textBox1.Text;
+			settings.UseServer = checkBox1.Checked;
+			settings.ServerFile = textBox2.Text;
+			settings.ServerArg = textBox3.Text;
+			settings.JavaDir = textBox4.Text;
 		}
 
 		public PageServer(AppSettingForm form)
 		{
 			this.settingForm = form;
 			InitializeComponent();
+			init();
 		}
 
 		public PageServer()
@@ -90,11 +94,6 @@ namespace MinecraftCommandController.Setting
 			{
 				groupBox2.Enabled = false;
 			}
-		}
-
-		private void PageServer_Load(object sender, EventArgs e)
-		{
-			init();
 		}
 	}
 }
