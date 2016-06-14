@@ -19,8 +19,8 @@ namespace MinecraftCommandController.Skript
 
 		public SkList(AppMainForm form)
 		{
-			this.appMainForm = form;
 			InitializeComponent();
+			this.appMainForm = form;
 			init();
 		}
 
@@ -35,7 +35,7 @@ namespace MinecraftCommandController.Skript
 			listBox2.Items.Clear();
 
 			string skDir = appMainForm.settings.McDir + @"\plugins\Skript\scripts";
-			if (System.IO.Directory.Exists(skDir))
+			if (Directory.Exists(skDir))
 			{
 				string[] files = Directory.GetFiles(skDir, "*.sk");
 				foreach (string s in files)
@@ -73,8 +73,8 @@ namespace MinecraftCommandController.Skript
 			listBox2.Sorted = true;
 			listBox1.Items.Remove(strSelName);
 			string strOutput = "skript enable " + strSelName;
-			TargetWindow.fncActiveTarget(appMainForm.settings);
-			TargetWindow.fncExecuteCommand(strOutput, appMainForm.settings);
+			TargetWindow.fncActiveTarget();
+			TargetWindow.fncExecuteCommand(strOutput);
 		}
 
 		private void listBox2_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -84,36 +84,36 @@ namespace MinecraftCommandController.Skript
 			listBox1.Sorted = true;
 			listBox2.Items.Remove(strSelName);
 			string strOutput = "skript disable " + strSelName;
-			TargetWindow.fncActiveTarget(appMainForm.settings);
-			TargetWindow.fncExecuteCommand(strOutput, appMainForm.settings);
+			TargetWindow.fncActiveTarget();
+			TargetWindow.fncExecuteCommand(strOutput);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
 			string strOutput = "skript reload all";
-			TargetWindow.fncActiveTarget(appMainForm.settings);
-			TargetWindow.fncExecuteCommand(strOutput, appMainForm.settings);
+			TargetWindow.fncActiveTarget();
+			TargetWindow.fncExecuteCommand(strOutput);
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
 			string strOutput = "skript reload config";
-			TargetWindow.fncActiveTarget(appMainForm.settings);
-			TargetWindow.fncExecuteCommand(strOutput, appMainForm.settings);
+			TargetWindow.fncActiveTarget();
+			TargetWindow.fncExecuteCommand(strOutput);
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
 			string strOutput = "skript reload aliases";
-			TargetWindow.fncActiveTarget(appMainForm.settings);
-			TargetWindow.fncExecuteCommand(strOutput, appMainForm.settings);
+			TargetWindow.fncActiveTarget();
+			TargetWindow.fncExecuteCommand(strOutput);
 		}
 
 		private void button5_Click(object sender, EventArgs e)
 		{
 			string strOutput = "skript reload scripts";
-			TargetWindow.fncActiveTarget(appMainForm.settings);
-			TargetWindow.fncExecuteCommand(strOutput, appMainForm.settings);
+			TargetWindow.fncActiveTarget();
+			TargetWindow.fncExecuteCommand(strOutput);
 		}
 
 		private void button6_Click(object sender, EventArgs e)
@@ -125,8 +125,8 @@ namespace MinecraftCommandController.Skript
 			}
 			string strSelName = listBox2.SelectedItem.ToString();
 			string strOutput = "skript reload " + strSelName;
-			TargetWindow.fncActiveTarget(appMainForm.settings);
-			TargetWindow.fncExecuteCommand(strOutput, appMainForm.settings);
+			TargetWindow.fncActiveTarget();
+			TargetWindow.fncExecuteCommand(strOutput);
 		}
 	}
 }

@@ -28,20 +28,20 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("全般");
-			System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("サーバー連携");
-			System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("データソース");
-			System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("環境", new System.Windows.Forms.TreeNode[] {
-            treeNode17,
-            treeNode18,
-            treeNode19});
-			System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Skript");
-			System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("HawkEye");
-			System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("ShadowAdmin");
-			System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("プラグイン", new System.Windows.Forms.TreeNode[] {
-            treeNode21,
-            treeNode22,
-            treeNode23});
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("全般");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("サーバー連携");
+			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("データソース");
+			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("環境", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Skript");
+			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("HawkEye");
+			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("ShadowAdmin");
+			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("プラグイン", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7});
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
@@ -53,26 +53,26 @@
 			this.treeView1.Font = new System.Drawing.Font("MS UI Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
 			this.treeView1.Location = new System.Drawing.Point(12, 12);
 			this.treeView1.Name = "treeView1";
-			treeNode17.Name = "ノード3";
-			treeNode17.Text = "全般";
-			treeNode18.Name = "ノード6";
-			treeNode18.Text = "サーバー連携";
-			treeNode19.Name = "ノード7";
-			treeNode19.Text = "データソース";
-			treeNode20.Checked = true;
-			treeNode20.Name = "ノード0";
-			treeNode20.Text = "環境";
-			treeNode21.Name = "ノード4";
-			treeNode21.Text = "Skript";
-			treeNode22.Name = "ノード5";
-			treeNode22.Text = "HawkEye";
-			treeNode23.Name = "ノード8";
-			treeNode23.Text = "ShadowAdmin";
-			treeNode24.Name = "ノード2";
-			treeNode24.Text = "プラグイン";
+			treeNode1.Name = "ノード3";
+			treeNode1.Text = "全般";
+			treeNode2.Name = "ノード6";
+			treeNode2.Text = "サーバー連携";
+			treeNode3.Name = "ノード7";
+			treeNode3.Text = "データソース";
+			treeNode4.Checked = true;
+			treeNode4.Name = "ノード0";
+			treeNode4.Text = "環境";
+			treeNode5.Name = "ノード4";
+			treeNode5.Text = "Skript";
+			treeNode6.Name = "ノード5";
+			treeNode6.Text = "HawkEye";
+			treeNode7.Name = "ノード8";
+			treeNode7.Text = "ShadowAdmin";
+			treeNode8.Name = "ノード2";
+			treeNode8.Text = "プラグイン";
 			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode24});
+            treeNode4,
+            treeNode8});
 			this.treeView1.Size = new System.Drawing.Size(154, 358);
 			this.treeView1.TabIndex = 0;
 			// 
@@ -116,7 +116,6 @@
 			this.MaximizeBox = false;
 			this.Name = "AppSettingForm";
 			this.Text = "設定";
-			this.Load += new System.EventHandler(this.AppSettingForm_Load);
 			this.ResumeLayout(false);
 
 		}

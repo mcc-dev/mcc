@@ -30,7 +30,7 @@ namespace MinecraftCommandController.Util
 		public const int VK_T = 0x54;
 		public const int VK_V = 0x56;
 		public const int VK_X = 0x58;
-		public const int VK_DIVIDE = 0xBF;
+		public const int VK_DIVIDE = 0xBF; //Divide(スラッシュ)
 
 		public static void keybd_click(int key)
 		{
@@ -52,6 +52,7 @@ namespace MinecraftCommandController.Util
 			Thread.Sleep(50);
 		}
 
+		/*
 		public static void keybd_paste_cmd()
 		{
 			keybd_event(VK_MENU, 0, KEYEVENTF_KEYDOWN, (UIntPtr)0);
@@ -65,5 +66,6 @@ namespace MinecraftCommandController.Util
 			keybd_click(VK_E);
 			keybd_click(VK_P);
 		}
+		*/
 	}
 }
