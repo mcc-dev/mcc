@@ -68,6 +68,24 @@
       <DependentUpon>AppMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppMain.cs" />
+    <Compile Include="ItemTemplates\MccContentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemTemplates\MccContentPage.Designer.cs">
+      <DependentUpon>MccContentPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemTemplates\MccSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemTemplates\MccSettingPage.Designer.cs">
+      <DependentUpon>MccSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerConsoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerConsoleForm.Designer.cs">
+      <DependentUpon>ServerConsoleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setting\AppSettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,8 +111,8 @@
     <Compile Include="Setting\PageServer.Designer.cs">
       <DependentUpon>PageServer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Setting\SettingAction.cs" />
-    <Compile Include="Setting\SettingDataEt.cs" />
+    <Compile Include="Daos\SettingDao.cs" />
+    <Compile Include="Entities\SettingEt.cs" />
     <Compile Include="Skript\SkList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +123,15 @@
     <Compile Include="Util\Win32API.cs" />
     <EmbeddedResource Include="AppMainForm.resx">
       <DependentUpon>AppMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemTemplates\MccContentPage.resx">
+      <DependentUpon>MccContentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemTemplates\MccSettingPage.resx">
+      <DependentUpon>MccSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerConsoleForm.resx">
+      <DependentUpon>ServerConsoleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Setting\AppSettingForm.resx">
       <DependentUpon>AppSettingForm.cs</DependentUpon>
@@ -148,6 +175,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Base\" />
     <Folder Include="HawkEye\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
