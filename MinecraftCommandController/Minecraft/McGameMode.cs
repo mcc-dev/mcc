@@ -37,29 +37,25 @@ namespace MinecraftCommandController.Minecraft
 		private void button1_Click(object sender, EventArgs e)
 		{
 			string cmd = "gamemode 0";
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(cmd);
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
 			string cmd = "gamemode 1";
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(cmd);
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
 			string cmd = "gamemode 2";
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(cmd);
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
 			string cmd = "gamemode 3";
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(cmd);
+			appMainForm.fncExecuteCommand(cmd);
 		}
 	}
 }

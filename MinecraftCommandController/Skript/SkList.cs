@@ -72,9 +72,8 @@ namespace MinecraftCommandController.Skript
 			listBox2.Items.Add(strSelName);
 			listBox2.Sorted = true;
 			listBox1.Items.Remove(strSelName);
-			string strOutput = "skript enable " + strSelName;
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(strOutput);
+			string cmd = "skript enable " + strSelName;
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void listBox2_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -83,37 +82,32 @@ namespace MinecraftCommandController.Skript
 			listBox1.Items.Add(strSelName);
 			listBox1.Sorted = true;
 			listBox2.Items.Remove(strSelName);
-			string strOutput = "skript disable " + strSelName;
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(strOutput);
+			string cmd = "skript disable " + strSelName;
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			string strOutput = "skript reload all";
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(strOutput);
+			string cmd = "skript reload all";
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			string strOutput = "skript reload config";
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(strOutput);
+			string cmd = "skript reload config";
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-			string strOutput = "skript reload aliases";
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(strOutput);
+			string cmd = "skript reload aliases";
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			string strOutput = "skript reload scripts";
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(strOutput);
+			string cmd = "skript reload scripts";
+			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button6_Click(object sender, EventArgs e)
@@ -124,9 +118,8 @@ namespace MinecraftCommandController.Skript
 				return;
 			}
 			string strSelName = listBox2.SelectedItem.ToString();
-			string strOutput = "skript reload " + strSelName;
-			TargetWindow.fncActiveTarget();
-			TargetWindow.fncExecuteCommand(strOutput);
+			string cmd = "skript reload " + strSelName;
+			appMainForm.fncExecuteCommand(cmd);
 		}
 	}
 }

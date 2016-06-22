@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MinecraftCommandController.Daos;
+using MinecraftCommandController.Entities;
+
 namespace MinecraftCommandController.Setting
 {
 	public partial class PageServer : UserControl
 	{
 		private AppSettingForm settingForm;
-		private SettingDataEt settings;
+		private SettingEt settings;
 
 		private void init()
 		{
-			settings = SettingAction.ReferSettings();
+			settings = SettingDao.ReferSettings();
 			textBox1.Text = settings.McDir;
 			checkBox1.Checked = settings.UseServer;
 			textBox2.Text = settings.ServerFile;

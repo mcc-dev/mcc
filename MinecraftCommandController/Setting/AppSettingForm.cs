@@ -8,18 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MinecraftCommandController.Daos;
+using MinecraftCommandController.Entities;
+
 namespace MinecraftCommandController.Setting
 {
 	public partial class AppSettingForm : Form
 	{
-		public SettingDataEt settings;
+		public SettingEt settings;
+		private AppMainForm appMainForm;
 
 		private Dictionary<string, UserControl> dicSettingPage;
 		private PageServer pageServer;
 
 		private void init()
 		{
-			settings = SettingAction.ReferSettings();
+			settings = SettingDao.ReferSettings();
 			dicSettingPage = new Dictionary<string, UserControl>();
 
 			//サーバー連携
@@ -29,10 +33,10 @@ namespace MinecraftCommandController.Setting
 			dicSettingPage.Add("サーバー連携", pageServer);
 		}
 
-		public AppSettingForm(SettingDataEt settings)
+		public AppSettingForm(AppMainForm form)
 		{
 			InitializeComponent();
-			//this.settings = settings;
+			appMainForm = form;
 			init();
 		}
 
@@ -46,7 +50,8 @@ namespace MinecraftCommandController.Setting
 		private void button1_Click(object sender, EventArgs e)
 		{
 			pageServer.fncSetData();
-			SettingAction.SaveSettings(settings);
+			SettingDao.SaveSettings(settings);
+			appMainForm.fncApplySettings();
 			this.Close();
 		}
 
