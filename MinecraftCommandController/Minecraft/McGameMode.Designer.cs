@@ -33,18 +33,18 @@
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.playerSelect1 = new MinecraftCommandController.Util.PlayerSelect();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.playerSelect1);
 			this.groupBox1.Controls.Add(this.button4);
 			this.groupBox1.Controls.Add(this.button3);
 			this.groupBox1.Controls.Add(this.button2);
 			this.groupBox1.Controls.Add(this.button1);
-			this.groupBox1.Controls.Add(this.textBox1);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Location = new System.Drawing.Point(3, 3);
 			this.groupBox1.Name = "groupBox1";
@@ -93,14 +93,6 @@
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// textBox1
-			// 
-			this.textBox1.Enabled = false;
-			this.textBox1.Location = new System.Drawing.Point(58, 18);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 19);
-			this.textBox1.TabIndex = 1;
-			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
@@ -109,6 +101,14 @@
 			this.label1.Size = new System.Drawing.Size(46, 12);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "対象ID：";
+			// 
+			// playerSelect1
+			// 
+			this.playerSelect1.Location = new System.Drawing.Point(55, 11);
+			this.playerSelect1.Margin = new System.Windows.Forms.Padding(0);
+			this.playerSelect1.Name = "playerSelect1";
+			this.playerSelect1.Size = new System.Drawing.Size(155, 29);
+			this.playerSelect1.TabIndex = 6;
 			// 
 			// McGameMode
 			// 
@@ -131,7 +131,7 @@
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label1;
+		private Util.PlayerSelect playerSelect1;
 	}
 }

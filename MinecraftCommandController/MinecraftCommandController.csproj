@@ -68,6 +68,10 @@
       <DependentUpon>AppMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppMain.cs" />
+    <Compile Include="Daos\PlayerDao.cs" />
+    <Compile Include="Entities\PlayerCollectionEt.cs" />
+    <Compile Include="Entities\PlayerEt.cs" />
+    <Compile Include="AppSession.cs" />
     <Compile Include="ItemTemplates\MccContentPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +123,18 @@
     <Compile Include="Skript\SkList.Designer.cs">
       <DependentUpon>SkList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\PlayerSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\PlayerSelectForm.Designer.cs">
+      <DependentUpon>PlayerSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\PlayerSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Util\PlayerSelect.Designer.cs">
+      <DependentUpon>PlayerSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\TargetWindow.cs" />
     <Compile Include="Util\Win32API.cs" />
     <EmbeddedResource Include="AppMainForm.resx">
@@ -157,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Skript\SkList.resx">
       <DependentUpon>SkList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\PlayerSelect.resx">
+      <DependentUpon>PlayerSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\PlayerSelectForm.resx">
+      <DependentUpon>PlayerSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

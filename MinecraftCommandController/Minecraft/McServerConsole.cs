@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using MinecraftCommandController.Daos;
+using MinecraftCommandController.Entities;
 
 namespace MinecraftCommandController.Minecraft
 {
@@ -83,12 +79,14 @@ namespace MinecraftCommandController.Minecraft
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			SettingEt setting = SettingDao.ReferSettings();
+
 			//マインクラフトサーバー起動
-			p.StandardInput.WriteLine("cd " + appMainForm.settings.McDir);
+			p.StandardInput.WriteLine("cd " + setting.McDir);
 			p.StandardInput.WriteLine(
-				"\"" + appMainForm.settings.JavaDir + "\\java\" " +
-				appMainForm.settings.ServerArg +
-				" -jar \"" + appMainForm.settings.ServerFile + "\""
+				"\"" + setting.JavaDir + "\\java\" " +
+				setting.ServerArg +
+				" -jar \"" + setting.ServerFile + "\""
 				);
 
 			button1.Enabled = false;

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using MinecraftCommandController.Daos;
@@ -26,8 +20,6 @@ namespace MinecraftCommandController
 		private Dictionary<string, UserControl> dicSkript;
 		private Dictionary<string, UserControl> dicHawkEye;
 		private string sSelectedTool;
-		public bool bRunningServer = false;
-		public int iExecutionMode = 0;
 
 		public AppSettingForm settingForm;
 		public ServerConsoleForm serverConsoleForm;
@@ -128,8 +120,8 @@ namespace MinecraftCommandController
 		public void fncApplySettings()
 		{
 			toolStripMenuItem8.Enabled = (settings.UseServer) ? true : false;
-			toolStripMenuItem7.Enabled = (bRunningServer) ? true : false;
-			if (!bRunningServer && toolStripMenuItem7.Checked)
+			toolStripMenuItem7.Enabled = (AppSession.bRunningServer) ? true : false;
+			if (!AppSession.bRunningServer && toolStripMenuItem7.Checked)
 			{
 				toolStripMenuItem6.Checked = true;
 				toolStripMenuItem7.Checked = false;
@@ -140,7 +132,7 @@ namespace MinecraftCommandController
 		//コマンド実行
 		public void fncExecuteCommand(string cmd)
 		{
-			if (bRunningServer)
+			if (AppSession.bRunningServer && AppSession.iExecutionMode == 1)
 			{
 				serverConsoleForm.fncExecuteCommand(cmd);
 			}
@@ -162,6 +154,7 @@ namespace MinecraftCommandController
 		private void toolStripMenuItem3_Click(object sender, EventArgs e)
 		{
 			//AppSettingForm form = new AppSettingForm();
+			settingForm.StartPosition = FormStartPosition.CenterParent;
 			settingForm.ShowDialog();
 		}
 
@@ -173,7 +166,7 @@ namespace MinecraftCommandController
 		private void AppMainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			//サーバーが起動中の場合
-			if (bRunningServer)
+			if (AppSession.bRunningServer)
 			{
 				if (e.CloseReason == CloseReason.UserClosing)
 				{
@@ -207,6 +200,9 @@ namespace MinecraftCommandController
 
 		private void toolStripMenuItem8_Click(object sender, EventArgs e)
 		{
+			serverConsoleForm.StartPosition = FormStartPosition.Manual;
+			serverConsoleForm.Left = this.Left + this.Width;
+			serverConsoleForm.Top = this.Top;
 			serverConsoleForm.Show();
 		}
 
@@ -214,14 +210,14 @@ namespace MinecraftCommandController
 		{
 			toolStripMenuItem6.Checked = true;
 			toolStripMenuItem7.Checked = false;
-			iExecutionMode = 0;
+			AppSession.iExecutionMode = 0;
 		}
 
 		private void toolStripMenuItem7_Click(object sender, EventArgs e)
 		{
 			toolStripMenuItem6.Checked = false;
 			toolStripMenuItem7.Checked = true;
-			iExecutionMode = 1;
+			AppSession.iExecutionMode = 1;
 		}
 	}
 }

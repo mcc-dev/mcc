@@ -104,7 +104,7 @@ namespace MinecraftCommandController
 			button2.Enabled = true;
 			textBox1.Enabled = true;
 
-			appMainForm.bRunningServer = true;
+			AppSession.bRunningServer = true;
 			appMainForm.fncApplySettings();
 		}
 
@@ -145,7 +145,7 @@ namespace MinecraftCommandController
 			//p.CancelOutputRead();
 			//p.CancelErrorRead();
 
-			appMainForm.bRunningServer = false;
+			AppSession.bRunningServer = false;
 			appMainForm.fncApplySettings();
 		}
 
