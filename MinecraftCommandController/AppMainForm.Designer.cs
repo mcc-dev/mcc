@@ -32,8 +32,8 @@
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,13 +88,6 @@
 			this.toolStripMenuItem1.Size = new System.Drawing.Size(56, 20);
 			this.toolStripMenuItem1.Text = "ツール";
 			// 
-			// toolStripMenuItem3
-			// 
-			this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-			this.toolStripMenuItem3.Size = new System.Drawing.Size(184, 22);
-			this.toolStripMenuItem3.Text = "設定";
-			this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-			// 
 			// toolStripMenuItem8
 			// 
 			this.toolStripMenuItem8.Enabled = false;
@@ -102,6 +95,13 @@
 			this.toolStripMenuItem8.Size = new System.Drawing.Size(184, 22);
 			this.toolStripMenuItem8.Text = "サーバーコンソール";
 			this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+			// 
+			// toolStripMenuItem3
+			// 
+			this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+			this.toolStripMenuItem3.Size = new System.Drawing.Size(184, 22);
+			this.toolStripMenuItem3.Text = "設定";
+			this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
 			// 
 			// toolStripMenuItem5
 			// 

@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using MinecraftCommandController.Util;
 
 namespace MinecraftCommandController.Minecraft
 {
@@ -29,6 +18,19 @@ namespace MinecraftCommandController.Minecraft
 		{
 		}
 
+		private bool fncTargetIsEmpty(string player)
+		{
+			if (player == "")
+			{
+				MessageBox.Show("対象IDを指定してください。");
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 		public McGameMode()
 		{
 			InitializeComponent();
@@ -36,25 +38,45 @@ namespace MinecraftCommandController.Minecraft
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			string cmd = "gamemode 0";
+			string player = playerSelect1.fncGetPlayerName();
+			if (fncTargetIsEmpty(player))
+			{
+				return;
+			}
+			string cmd = "gamemode 0 " + player;
 			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			string cmd = "gamemode 1";
+			string player = playerSelect1.fncGetPlayerName();
+			if (fncTargetIsEmpty(player))
+			{
+				return;
+			}
+			string cmd = "gamemode 1 " + player;
 			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			string cmd = "gamemode 2";
+			string player = playerSelect1.fncGetPlayerName();
+			if (fncTargetIsEmpty(player))
+			{
+				return;
+			}
+			string cmd = "gamemode 2 " + player;
 			appMainForm.fncExecuteCommand(cmd);
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-			string cmd = "gamemode 3";
+			string player = playerSelect1.fncGetPlayerName();
+			if (fncTargetIsEmpty(player))
+			{
+				return;
+			}
+			string cmd = "gamemode 3 " + player;
 			appMainForm.fncExecuteCommand(cmd);
 		}
 	}
