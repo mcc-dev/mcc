@@ -120,12 +120,6 @@
     <Compile Include="Minecraft\McGameMode.Designer.cs">
       <DependentUpon>McGameMode.cs</DependentUpon>
     </Compile>
-    <Compile Include="Minecraft\McServerConsole.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Minecraft\McServerConsole.Designer.cs">
-      <DependentUpon>McServerConsole.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting\PageServer.cs">
       <SubType>UserControl</SubType>
@@ -175,9 +169,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Minecraft\McGameMode.resx">
       <DependentUpon>McGameMode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Minecraft\McServerConsole.resx">
-      <DependentUpon>McServerConsole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
