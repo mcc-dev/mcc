@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MinecraftCommandController.Base;
 using MinecraftCommandController.Daos;
 using MinecraftCommandController.Entities;
 
@@ -18,13 +13,13 @@ namespace MinecraftCommandController.Setting
 		public SettingEt settings;
 		private AppMainForm appMainForm;
 
-		private Dictionary<string, UserControl> dicSettingPage;
+		private Dictionary<string, MccSettingPageBase> dicSettingPage;
 		private PageServer pageServer;
 
 		private void init()
 		{
 			settings = SettingDao.ReferSettings();
-			dicSettingPage = new Dictionary<string, UserControl>();
+			dicSettingPage = new Dictionary<string, MccSettingPageBase>();
 
 			//サーバー連携
 			pageServer = new PageServer(this);
@@ -49,7 +44,12 @@ namespace MinecraftCommandController.Setting
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			pageServer.fncSetData();
+			//各ページの設定情報を設定エンティティへ反映
+			foreach (var page in dicSettingPage.Values)
+			{
+				page.fncSetData();
+			}
+			//pageServer.fncSetData();
 			SettingDao.SaveSettings(settings);
 			appMainForm.fncApplySettings();
 			this.Close();

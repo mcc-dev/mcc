@@ -68,6 +68,18 @@
       <DependentUpon>AppMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppMain.cs" />
+    <Compile Include="Base\MccContentPageBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\MccContentPageBase.Designer.cs">
+      <DependentUpon>MccContentPageBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\MccSettingPageBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\MccSettingPageBase.Designer.cs">
+      <DependentUpon>MccSettingPageBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Daos\PlayerDao.cs" />
     <Compile Include="Entities\PlayerCollectionEt.cs" />
     <Compile Include="Entities\PlayerEt.cs" />
@@ -197,7 +209,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base\" />
     <Folder Include="HawkEye\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
