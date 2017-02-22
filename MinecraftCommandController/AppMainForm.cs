@@ -14,7 +14,7 @@ namespace MinecraftCommandController
 	{
 		public SettingEt settings;
 		private Minecraft.McGameMode mcGameMode;
-		//private Minecraft.McServerConsole mcServerConsole;
+		private Minecraft.McTeleport mcTeleport;
 		private Skript.SkList skList;
 		private Dictionary<string, Dictionary<string, MccContentPageBase>> dicTools;
 		private Dictionary<string, MccContentPageBase> dicMinecraft;
@@ -45,12 +45,11 @@ namespace MinecraftCommandController
 			mcGameMode.Visible = false;
 			panel2.Controls.Add(mcGameMode);
 			dicMinecraft.Add("プレイヤー", mcGameMode);
-
-			//Minecraft.McServerConsole
-			//mcServerConsole = new Minecraft.McServerConsole(this);
-			//mcServerConsole.Visible = false;
-			//panel2.Controls.Add(mcServerConsole);
-			//dicMinecraft.Add("サーバー", mcServerConsole);
+			//Minecraft.McTeleport
+			mcTeleport = new Minecraft.McTeleport(this);
+			mcTeleport.Visible = false;
+			panel2.Controls.Add(mcTeleport);
+			dicMinecraft.Add("テレポート", mcTeleport);
 
 			//Skript.McList
 			skList = new Skript.SkList(this);

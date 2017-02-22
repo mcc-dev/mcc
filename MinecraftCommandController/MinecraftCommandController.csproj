@@ -96,6 +96,12 @@
     <Compile Include="ItemTemplates\MccSettingPage.Designer.cs">
       <DependentUpon>MccSettingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Minecraft\McTeleport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Minecraft\McTeleport.Designer.cs">
+      <DependentUpon>McTeleport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServerConsoleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTemplates\MccSettingPage.resx">
       <DependentUpon>MccSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Minecraft\McTeleport.resx">
+      <DependentUpon>McTeleport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServerConsoleForm.resx">
       <DependentUpon>ServerConsoleForm.cs</DependentUpon>
