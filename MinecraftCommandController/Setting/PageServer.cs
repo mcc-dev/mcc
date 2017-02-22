@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MinecraftCommandController.Base;
 using MinecraftCommandController.Daos;
 using MinecraftCommandController.Entities;
 
 namespace MinecraftCommandController.Setting
 {
-	public partial class PageServer : UserControl
+	public partial class PageServer : MccSettingPageBase
 	{
 		private AppSettingForm settingForm;
 		private SettingEt settings;
@@ -29,7 +23,7 @@ namespace MinecraftCommandController.Setting
 		}
 
 		//入力内容を設定エンティティに反映
-		public void fncSetData()
+		public override void fncSetData()
 		{
 			settings.McDir = textBox1.Text;
 			settings.UseServer = checkBox1.Checked;

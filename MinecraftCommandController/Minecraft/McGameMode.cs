@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using MinecraftCommandController.Base;
+
 namespace MinecraftCommandController.Minecraft
 {
-	public partial class McGameMode : UserControl
+	public partial class McGameMode : MccContentPageBase
 	{
 		private AppMainForm appMainForm;
 

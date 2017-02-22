@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
+using MinecraftCommandController.Base;
 using MinecraftCommandController.Daos;
 using MinecraftCommandController.Entities;
 using MinecraftCommandController.Setting;
@@ -15,10 +16,10 @@ namespace MinecraftCommandController
 		private Minecraft.McGameMode mcGameMode;
 		//private Minecraft.McServerConsole mcServerConsole;
 		private Skript.SkList skList;
-		private Dictionary<string, Dictionary<string, UserControl>> dicTools;
-		private Dictionary<string, UserControl> dicMinecraft;
-		private Dictionary<string, UserControl> dicSkript;
-		private Dictionary<string, UserControl> dicHawkEye;
+		private Dictionary<string, Dictionary<string, MccContentPageBase>> dicTools;
+		private Dictionary<string, MccContentPageBase> dicMinecraft;
+		private Dictionary<string, MccContentPageBase> dicSkript;
+		private Dictionary<string, MccContentPageBase> dicHawkEye;
 		private string sSelectedTool;
 
 		public AppSettingForm settingForm;
@@ -29,11 +30,11 @@ namespace MinecraftCommandController
 			//設定のロード
 			settings = SettingDao.LoadSettings();
 
-			dicTools = new Dictionary<string, Dictionary<string, UserControl>>();
+			dicTools = new Dictionary<string, Dictionary<string, MccContentPageBase>>();
 
-			dicMinecraft = new Dictionary<string, UserControl>();
-			dicSkript = new Dictionary<string, UserControl>();
-			dicHawkEye = new Dictionary<string, UserControl>();
+			dicMinecraft = new Dictionary<string, MccContentPageBase>();
+			dicSkript = new Dictionary<string, MccContentPageBase>();
+			dicHawkEye = new Dictionary<string, MccContentPageBase>();
 
 			dicTools.Add("Minecraft", dicMinecraft);
 			dicTools.Add("Skript", dicSkript);

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
+﻿using MinecraftCommandController.Base;
 
 namespace MinecraftCommandController.ItemTemplates
 {
-	public partial class MccContentPage : UserControl
+	public partial class MccContentPage : MccContentPageBase
 	{
 		private AppMainForm appMainForm; //メインフォームの参照
 
