@@ -30,6 +30,9 @@
 		{
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.button5 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
+			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.button2 = new System.Windows.Forms.Button();
 			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -39,9 +42,6 @@
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.button1 = new System.Windows.Forms.Button();
 			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -74,9 +74,36 @@
 			this.tabPage1.Text = "ユーザー定義";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
+			// button5
+			// 
+			this.button5.Location = new System.Drawing.Point(171, 33);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(75, 23);
+			this.button5.TabIndex = 5;
+			this.button5.Text = "削除";
+			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
+			// 
+			// button4
+			// 
+			this.button4.Location = new System.Drawing.Point(171, 4);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(75, 23);
+			this.button4.TabIndex = 4;
+			this.button4.Text = "追加";
+			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
+			// 
+			// textBox2
+			// 
+			this.textBox2.Location = new System.Drawing.Point(6, 6);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(159, 19);
+			this.textBox2.TabIndex = 3;
+			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(171, 6);
+			this.button2.Location = new System.Drawing.Point(171, 254);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 1;
@@ -88,7 +115,7 @@
 			// 
 			this.listBox1.FormattingEnabled = true;
 			this.listBox1.ItemHeight = 12;
-			this.listBox1.Location = new System.Drawing.Point(6, 6);
+			this.listBox1.Location = new System.Drawing.Point(6, 31);
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(159, 244);
 			this.listBox1.TabIndex = 0;
@@ -159,33 +186,6 @@
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(100, 19);
 			this.textBox1.TabIndex = 2;
-			// 
-			// textBox2
-			// 
-			this.textBox2.Location = new System.Drawing.Point(6, 256);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(159, 19);
-			this.textBox2.TabIndex = 3;
-			// 
-			// button4
-			// 
-			this.button4.Location = new System.Drawing.Point(171, 254);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(75, 23);
-			this.button4.TabIndex = 4;
-			this.button4.Text = "追加";
-			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.button4_Click);
-			// 
-			// button5
-			// 
-			this.button5.Location = new System.Drawing.Point(171, 35);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(75, 23);
-			this.button5.TabIndex = 5;
-			this.button5.Text = "削除";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// PlayerSelectForm
 			// 

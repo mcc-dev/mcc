@@ -39,7 +39,6 @@ namespace MinecraftCommandController.Setting
 		public AppSettingForm() //未使用
 		{
 			InitializeComponent();
-			init();
 		}
 
 		private void button1_Click(object sender, EventArgs e)

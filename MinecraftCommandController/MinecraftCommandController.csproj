@@ -80,6 +80,12 @@
     <Compile Include="Base\MccSettingPageBase.Designer.cs">
       <DependentUpon>MccSettingPageBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientSettingForm.Designer.cs">
+      <DependentUpon>ClientSettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Daos\PlayerDao.cs" />
     <Compile Include="Entities\PlayerCollectionEt.cs" />
     <Compile Include="Entities\PlayerEt.cs" />
@@ -151,6 +157,9 @@
     <Compile Include="Util\Win32API.cs" />
     <EmbeddedResource Include="AppMainForm.resx">
       <DependentUpon>AppMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientSettingForm.resx">
+      <DependentUpon>ClientSettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTemplates\MccContentPage.resx">
       <DependentUpon>MccContentPage.cs</DependentUpon>

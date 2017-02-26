@@ -24,6 +24,7 @@ namespace MinecraftCommandController
 
 		public AppSettingForm settingForm;
 		public ServerConsoleForm serverConsoleForm;
+		public ClientSettingForm clientSettingForm;
 
 		private void init()
 		{
@@ -59,6 +60,7 @@ namespace MinecraftCommandController
 
 			settingForm = new AppSettingForm(this);
 			serverConsoleForm = new ServerConsoleForm(this);
+			clientSettingForm = new ClientSettingForm(this);
 
 			if (settings.UseServer)
 			{
@@ -120,8 +122,8 @@ namespace MinecraftCommandController
 		public void fncApplySettings()
 		{
 			toolStripMenuItem8.Enabled = (settings.UseServer) ? true : false;
-			toolStripMenuItem7.Enabled = (AppSession.bRunningServer) ? true : false;
-			if (!AppSession.bRunningServer && toolStripMenuItem7.Checked)
+			toolStripMenuItem7.Enabled = (AppSession.isRunningServer) ? true : false;
+			if (!AppSession.isRunningServer && toolStripMenuItem7.Checked)
 			{
 				toolStripMenuItem6.Checked = true;
 				toolStripMenuItem7.Checked = false;
@@ -132,14 +134,26 @@ namespace MinecraftCommandController
 		//コマンド実行
 		public void fncExecuteCommand(string cmd)
 		{
-			if (AppSession.bRunningServer && AppSession.iExecutionMode == 1)
+			if (AppSession.isRunningServer && AppSession.iExecutionMode == 1)
 			{
 				serverConsoleForm.fncExecuteCommand(cmd);
 			}
 			else {
-				if (TargetWindow.fncActiveTarget())
+				if (AppSession.isSelectedProcess)
 				{
-					TargetWindow.fncExecuteCommand(cmd);
+					// ウィンドウ指定
+					if (TargetWindow.fncActiveTarget(AppSession.TargetProcess))
+					{
+						TargetWindow.fncExecuteCommand(cmd);
+					}
+				}
+				else
+				{
+					// ウィンドウ自動検索
+					if (TargetWindow.fncActiveTarget())
+					{
+						TargetWindow.fncExecuteCommand(cmd);
+					}
 				}
 			}
 		}
@@ -166,7 +180,7 @@ namespace MinecraftCommandController
 		private void AppMainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			//サーバーが起動中の場合
-			if (AppSession.bRunningServer)
+			if (AppSession.isRunningServer)
 			{
 				if (e.CloseReason == CloseReason.UserClosing)
 				{
@@ -218,6 +232,12 @@ namespace MinecraftCommandController
 			toolStripMenuItem6.Checked = false;
 			toolStripMenuItem7.Checked = true;
 			AppSession.iExecutionMode = 1;
+		}
+
+		private void toolStripMenuItem10_Click(object sender, EventArgs e)
+		{
+			clientSettingForm.StartPosition = FormStartPosition.CenterParent;
+			clientSettingForm.ShowDialog();
 		}
 	}
 }
