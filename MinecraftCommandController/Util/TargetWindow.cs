@@ -26,9 +26,34 @@ namespace MinecraftCommandController.Util
 		[DllImport("user32.dll")]
 		private static extern int GetWindowRect(IntPtr hwnd, ref  RECT lpRect);
 
-		static public List<Process> fncFindTargetAll()
+		static public List<Process> fncFindTargetAll(int type)
 		{
 			List<Process> lProcess = new List<Process>();
+
+			foreach (Process p in Process.GetProcesses())
+			{
+				switch (type)
+				{
+					case 1:
+						if (p.ProcessName == "java" && 0 <= p.MainWindowTitle.IndexOf("Minecraft 1"))
+						{
+							lProcess.Add(p);
+						}
+						else if (p.ProcessName == "javaw" && 0 <= p.MainWindowTitle.IndexOf("Minecraft 1"))
+						{
+							lProcess.Add(p);
+						}
+						break;
+					case 4:
+						if (p.ProcessName == "notepad" && 0 <= p.MainWindowTitle.IndexOf("メモ帳"))
+						{
+							lProcess.Add(p);
+						}
+						break;
+					default:
+						break;
+				}
+			}
 			return lProcess;
 		}
 
@@ -72,6 +97,18 @@ namespace MinecraftCommandController.Util
 		static public bool fncActiveTarget()
 		{
 			Process p = fncFindTarget();
+			if (p == null)
+			{
+				MessageBox.Show("画面が見つかりません。");
+				return false;
+			}
+			Win32API.SetForegroundWindow(p.MainWindowHandle);
+			Thread.Sleep(50);
+			return true;
+		}
+
+		static public bool fncActiveTarget(Process p)
+		{
 			if (p == null)
 			{
 				MessageBox.Show("画面が見つかりません。");
