@@ -96,7 +96,7 @@
 			this.label1.Location = new System.Drawing.Point(6, 23);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(32, 12);
-			this.label1.TabIndex = 1;
+			this.label1.TabIndex = 0;
 			this.label1.Text = "誰に :";
 			// 
 			// playerSelect2
@@ -105,7 +105,7 @@
 			this.playerSelect2.Margin = new System.Windows.Forms.Padding(0);
 			this.playerSelect2.Name = "playerSelect2";
 			this.playerSelect2.Size = new System.Drawing.Size(155, 31);
-			this.playerSelect2.TabIndex = 0;
+			this.playerSelect2.TabIndex = 1;
 			// 
 			// groupBox3
 			// 
@@ -124,7 +124,7 @@
 			this.button2.Location = new System.Drawing.Point(468, 18);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(40, 23);
-			this.button2.TabIndex = 3;
+			this.button2.TabIndex = 2;
 			this.button2.Text = "実行";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -135,7 +135,7 @@
 			this.label2.Location = new System.Drawing.Point(6, 23);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(32, 12);
-			this.label2.TabIndex = 2;
+			this.label2.TabIndex = 0;
 			this.label2.Text = "誰を :";
 			// 
 			// playerSelect3
@@ -144,7 +144,7 @@
 			this.playerSelect3.Margin = new System.Windows.Forms.Padding(0);
 			this.playerSelect3.Name = "playerSelect3";
 			this.playerSelect3.Size = new System.Drawing.Size(155, 31);
-			this.playerSelect3.TabIndex = 0;
+			this.playerSelect3.TabIndex = 1;
 			// 
 			// groupBox4
 			// 
@@ -166,7 +166,7 @@
 			this.label4.Location = new System.Drawing.Point(202, 23);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(32, 12);
-			this.label4.TabIndex = 4;
+			this.label4.TabIndex = 2;
 			this.label4.Text = "誰に :";
 			// 
 			// button3
@@ -174,7 +174,7 @@
 			this.button3.Location = new System.Drawing.Point(468, 18);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(40, 23);
-			this.button3.TabIndex = 3;
+			this.button3.TabIndex = 4;
 			this.button3.Text = "実行";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -193,7 +193,7 @@
 			this.label3.Location = new System.Drawing.Point(6, 23);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(32, 12);
-			this.label3.TabIndex = 2;
+			this.label3.TabIndex = 0;
 			this.label3.Text = "誰を :";
 			// 
 			// playerSelect4
@@ -202,7 +202,7 @@
 			this.playerSelect4.Margin = new System.Windows.Forms.Padding(0);
 			this.playerSelect4.Name = "playerSelect4";
 			this.playerSelect4.Size = new System.Drawing.Size(155, 31);
-			this.playerSelect4.TabIndex = 0;
+			this.playerSelect4.TabIndex = 1;
 			// 
 			// McTeleport
 			// 
