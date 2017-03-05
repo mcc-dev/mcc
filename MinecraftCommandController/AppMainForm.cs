@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 using MinecraftCommandController.Base;
+using MinecraftCommandController.Contents.Minecraft;
+using MinecraftCommandController.Contents.Skript;
 using MinecraftCommandController.Daos;
 using MinecraftCommandController.Entities;
 using MinecraftCommandController.Setting;
@@ -13,13 +15,14 @@ namespace MinecraftCommandController
 	public partial class AppMainForm : Form
 	{
 		public SettingEt settings;
-		private Minecraft.McGameMode mcGameMode;
-		private Minecraft.McTeleport mcTeleport;
-		private Skript.SkList skList;
+		private McGameMode mcGameMode;
+		private McTeleport mcTeleport;
+		private McEffect mcEffect;
+		private SkList skList;
 		private Dictionary<string, Dictionary<string, MccContentPageBase>> dicTools;
 		private Dictionary<string, MccContentPageBase> dicMinecraft;
 		private Dictionary<string, MccContentPageBase> dicSkript;
-		private Dictionary<string, MccContentPageBase> dicHawkEye;
+		//private Dictionary<string, MccContentPageBase> dicHawkEye;
 		private string sSelectedTool;
 
 		public AppSettingForm settingForm;
@@ -35,25 +38,30 @@ namespace MinecraftCommandController
 
 			dicMinecraft = new Dictionary<string, MccContentPageBase>();
 			dicSkript = new Dictionary<string, MccContentPageBase>();
-			dicHawkEye = new Dictionary<string, MccContentPageBase>();
+			//dicHawkEye = new Dictionary<string, MccContentPageBase>();
 
 			dicTools.Add("Minecraft", dicMinecraft);
 			dicTools.Add("Skript", dicSkript);
-			dicTools.Add("HawkEye", dicHawkEye);
+			//dicTools.Add("HawkEye", dicHawkEye);
 
 			//Minecraft.McGameMode
-			mcGameMode = new Minecraft.McGameMode(this);
+			mcGameMode = new McGameMode(this);
 			mcGameMode.Visible = false;
 			panel2.Controls.Add(mcGameMode);
 			dicMinecraft.Add("プレイヤー", mcGameMode);
 			//Minecraft.McTeleport
-			mcTeleport = new Minecraft.McTeleport(this);
+			mcTeleport = new McTeleport(this);
 			mcTeleport.Visible = false;
 			panel2.Controls.Add(mcTeleport);
 			dicMinecraft.Add("テレポート", mcTeleport);
+			//Minecraft.McEffect
+			mcEffect = new McEffect(this);
+			mcEffect.Visible = false;
+			panel2.Controls.Add(mcEffect);
+			dicMinecraft.Add("エフェクト", mcEffect);
 
 			//Skript.McList
-			skList = new Skript.SkList(this);
+			skList = new SkList(this);
 			skList.Visible = false;
 			panel2.Controls.Add(skList);
 			dicSkript.Add("ファイル一覧", skList);

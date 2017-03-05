@@ -1,4 +1,4 @@
-﻿namespace MinecraftCommandController.Minecraft
+﻿namespace MinecraftCommandController.Contents.Minecraft
 {
 	partial class McTeleport
 	{

@@ -94,8 +94,17 @@
     <Compile Include="ClientSettingForm.Designer.cs">
       <DependentUpon>ClientSettingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contents\Minecraft\McEffect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contents\Minecraft\McEffect.Designer.cs">
+      <DependentUpon>McEffect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Daos\EffectDao.cs" />
     <Compile Include="Daos\PlayerDao.cs" />
+    <Compile Include="Entities\EffectCollectionEt.cs" />
     <Compile Include="Entities\PlayerCollectionEt.cs" />
+    <Compile Include="Entities\EffectEt.cs" />
     <Compile Include="Entities\PlayerEt.cs" />
     <Compile Include="AppSession.cs" />
     <Compile Include="ItemTemplates\MccContentPage.cs">
@@ -110,10 +119,10 @@
     <Compile Include="ItemTemplates\MccSettingPage.Designer.cs">
       <DependentUpon>MccSettingPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Minecraft\McTeleport.cs">
+    <Compile Include="Contents\Minecraft\McTeleport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Minecraft\McTeleport.Designer.cs">
+    <Compile Include="Contents\Minecraft\McTeleport.Designer.cs">
       <DependentUpon>McTeleport.cs</DependentUpon>
     </Compile>
     <Compile Include="ServerConsoleForm.cs">
@@ -128,10 +137,10 @@
     <Compile Include="Setting\AppSettingForm.Designer.cs">
       <DependentUpon>AppSettingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Minecraft\McGameMode.cs">
+    <Compile Include="Contents\Minecraft\McGameMode.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Minecraft\McGameMode.Designer.cs">
+    <Compile Include="Contents\Minecraft\McGameMode.Designer.cs">
       <DependentUpon>McGameMode.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,10 +152,10 @@
     </Compile>
     <Compile Include="Daos\SettingDao.cs" />
     <Compile Include="Entities\SettingEt.cs" />
-    <Compile Include="Skript\SkList.cs">
+    <Compile Include="Contents\Skript\SkList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Skript\SkList.Designer.cs">
+    <Compile Include="Contents\Skript\SkList.Designer.cs">
       <DependentUpon>SkList.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\PlayerSelectForm.cs">
@@ -169,13 +178,16 @@
     <EmbeddedResource Include="ClientSettingForm.resx">
       <DependentUpon>ClientSettingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contents\Minecraft\McEffect.resx">
+      <DependentUpon>McEffect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemTemplates\MccContentPage.resx">
       <DependentUpon>MccContentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemTemplates\MccSettingPage.resx">
       <DependentUpon>MccSettingPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Minecraft\McTeleport.resx">
+    <EmbeddedResource Include="Contents\Minecraft\McTeleport.resx">
       <DependentUpon>McTeleport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServerConsoleForm.resx">
@@ -184,7 +196,7 @@
     <EmbeddedResource Include="Setting\AppSettingForm.resx">
       <DependentUpon>AppSettingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Minecraft\McGameMode.resx">
+    <EmbeddedResource Include="Contents\Minecraft\McGameMode.resx">
       <DependentUpon>McGameMode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -200,7 +212,7 @@
     <EmbeddedResource Include="Setting\PageServer.resx">
       <DependentUpon>PageServer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Skript\SkList.resx">
+    <EmbeddedResource Include="Contents\Skript\SkList.resx">
       <DependentUpon>SkList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Util\PlayerSelect.resx">
@@ -209,6 +221,7 @@
     <EmbeddedResource Include="Util\PlayerSelectForm.resx">
       <DependentUpon>PlayerSelectForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -226,7 +239,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="HawkEye\" />
+    <Folder Include="Contents\HawkEye\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="mcc.ico" />
@@ -239,6 +252,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)Resource $(TargetDir)Resource /D/E/C/I/H/Y</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

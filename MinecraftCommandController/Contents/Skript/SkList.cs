@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 using MinecraftCommandController.Base;
 
-namespace MinecraftCommandController.Skript
+namespace MinecraftCommandController.Contents.Skript
 {
 	public partial class SkList : MccContentPageBase
 	{

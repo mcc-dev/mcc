@@ -36,12 +36,8 @@
             treeNode2,
             treeNode3});
 			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Skript");
-			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("HawkEye");
-			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("ShadowAdmin");
-			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("プラグイン", new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7});
+			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("プラグイン", new System.Windows.Forms.TreeNode[] {
+            treeNode5});
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
@@ -64,15 +60,11 @@
 			treeNode4.Text = "環境";
 			treeNode5.Name = "ノード4";
 			treeNode5.Text = "Skript";
-			treeNode6.Name = "ノード5";
-			treeNode6.Text = "HawkEye";
-			treeNode7.Name = "ノード8";
-			treeNode7.Text = "ShadowAdmin";
-			treeNode8.Name = "ノード2";
-			treeNode8.Text = "プラグイン";
+			treeNode6.Name = "ノード2";
+			treeNode6.Text = "プラグイン";
 			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode4,
-            treeNode8});
+            treeNode6});
 			this.treeView1.Size = new System.Drawing.Size(154, 358);
 			this.treeView1.TabIndex = 0;
 			// 

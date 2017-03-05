@@ -7,14 +7,14 @@ using MinecraftCommandController.Entities;
 
 namespace MinecraftCommandController.Daos
 {
-	public class PlayerDao
+	public class EffectDao
 	{
-		public PlayerDao()
+		public EffectDao()
 		{
 
 		}
 
-		public void SaveXml(PlayerCollectionEt list, string filepath)
+		public void SaveXml(EffectCollectionEt list, string filepath)
 		{
 			string dir = Path.GetDirectoryName(filepath);
 			//ディレクトリが存在しない場合は作成
@@ -25,7 +25,7 @@ namespace MinecraftCommandController.Daos
 			//＜XMLファイルに書き込む＞
 			//XmlSerializerオブジェクトを作成
 			//書き込むオブジェクトの型を指定する
-			XmlSerializer serializer1 = new XmlSerializer(typeof(PlayerCollectionEt));
+			XmlSerializer serializer1 = new XmlSerializer(typeof(EffectCollectionEt));
 			//ファイルを開く（UTF-8 BOM無し）
 			StreamWriter sw = new StreamWriter(filepath, false, new UTF8Encoding(false));
 			//シリアル化し、XMLファイルに保存する
@@ -34,20 +34,20 @@ namespace MinecraftCommandController.Daos
 			sw.Close();
 		}
 
-		public PlayerCollectionEt LoadXml(string filepath)
+		public EffectCollectionEt LoadXml(string filepath)
 		{
-			PlayerCollectionEt list;
+			EffectCollectionEt list;
 			if (!File.Exists(filepath))
 			{
 				return null;
 			}
 			//＜XMLファイルから読み込む＞
 			//XmlSerializerオブジェクトの作成
-			XmlSerializer serializer2 = new XmlSerializer(typeof(PlayerCollectionEt));
+			XmlSerializer serializer2 = new XmlSerializer(typeof(EffectCollectionEt));
 			//ファイルを開く
 			StreamReader sr = new StreamReader(filepath, new UTF8Encoding(false));
 			//XMLファイルから読み込み、逆シリアル化する
-			list = (PlayerCollectionEt)serializer2.Deserialize(sr);
+			list = (EffectCollectionEt)serializer2.Deserialize(sr);
 			//閉じる
 			sr.Close();
 

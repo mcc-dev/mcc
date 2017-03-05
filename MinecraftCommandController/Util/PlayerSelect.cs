@@ -12,19 +12,30 @@ namespace MinecraftCommandController.Util
 {
 	public partial class PlayerSelect : UserControl
 	{
+		public PlayerSelect()
+		{
+			InitializeComponent();
+		}
+
 		public string fncGetPlayerName()
 		{
 			return textBox1.Text.Trim();
 		}
 
+		public bool fncPlayerIsEmpty()
+		{
+			if (textBox1.Text.Trim() == "")
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 		public void fncSetPlayerName(string player)
 		{
 			textBox1.Text = player;
-		}
-
-		public PlayerSelect()
-		{
-			InitializeComponent();
 		}
 
 		private void button1_Click(object sender, EventArgs e)

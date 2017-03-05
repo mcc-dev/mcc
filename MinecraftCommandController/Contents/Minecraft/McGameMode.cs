@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 using MinecraftCommandController.Base;
 
-namespace MinecraftCommandController.Minecraft
+namespace MinecraftCommandController.Contents.Minecraft
 {
 	public partial class McGameMode : MccContentPageBase
 	{
@@ -79,6 +79,30 @@ namespace MinecraftCommandController.Minecraft
 				return;
 			}
 			string cmd = "gamemode 3 " + player;
+			appMainForm.fncExecuteCommand(cmd);
+		}
+
+		//コマンドブロック
+		private void button5_Click(object sender, EventArgs e)
+		{
+			string player = playerSelect2.fncGetPlayerName();
+			if (fncTargetIsEmpty(player))
+			{
+				return;
+			}
+			string cmd = "give " + player + " minecraft:command_block";
+			appMainForm.fncExecuteCommand(cmd);
+		}
+
+		//コマンドトロッコ
+		private void button6_Click(object sender, EventArgs e)
+		{
+			string player = playerSelect2.fncGetPlayerName();
+			if (fncTargetIsEmpty(player))
+			{
+				return;
+			}
+			string cmd = "give " + player + " minecraft:command_block_minecart";
 			appMainForm.fncExecuteCommand(cmd);
 		}
 	}
