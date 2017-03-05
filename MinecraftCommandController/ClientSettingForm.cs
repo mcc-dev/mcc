@@ -59,20 +59,20 @@ namespace MinecraftCommandController
 			lProcess = TargetWindow.fncFindTargetAll(fncGetInputExcuteType());
 			foreach (Process p in lProcess)
 			{
-				ListBoxCustomItem item = new ListBoxCustomItem();
+				ListBoxProcessItem item = new ListBoxProcessItem();
 				item.Text = p.Id.ToString();
 				item.Process = p;
 				listBox1.Items.Add(item);
 			}
 		}
 
-		// カスタムリストボックスアイテム
-		public class ListBoxCustomItem
+		// プロセス用リストボックスアイテム
+		public class ListBoxProcessItem
 		{
 			public string Text { get; set; }
 			public Process Process { get; set; }
 
-			public ListBoxCustomItem()
+			public ListBoxProcessItem()
 			{
 				Text = "";
 				Process = null;
@@ -91,9 +91,9 @@ namespace MinecraftCommandController
 				{
 					return false;
 				}
-				ListBoxCustomItem lbci = (ListBoxCustomItem)obj;
-				if (this.Text != lbci.Text) { return false; }
-				if (this.Process != lbci.Process) { return false; }
+				ListBoxProcessItem item = (ListBoxProcessItem)obj;
+				if (this.Text != item.Text) { return false; }
+				if (this.Process != item.Process) { return false; }
 				return true;
 			}
 
@@ -135,7 +135,7 @@ namespace MinecraftCommandController
 			if (checkBox1.Checked)
 			{
 				// 選択されている行のデータ
-				ListBoxCustomItem selItem = (ListBoxCustomItem)listBox1.SelectedItem;
+				ListBoxProcessItem selItem = (ListBoxProcessItem)listBox1.SelectedItem;
 				if (selItem == null)
 				{
 					MessageBox.Show("プロセスを選択してください。");
@@ -196,7 +196,7 @@ namespace MinecraftCommandController
 		private void button2_Click(object sender, EventArgs e)
 		{
 			// 選択されている行のデータ
-			ListBoxCustomItem selItem = (ListBoxCustomItem)listBox1.SelectedItem;
+			ListBoxProcessItem selItem = (ListBoxProcessItem)listBox1.SelectedItem;
 			if (selItem == null)
 			{
 				MessageBox.Show("プロセスを選択してください。");

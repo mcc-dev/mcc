@@ -22,7 +22,7 @@ namespace MinecraftCommandController.Util
 		{
 			PlayerCollectionEt pc = new PlayerCollectionEt();
 			PlayerDao dao = new PlayerDao();
-			pc = dao.LoadXml(@"player.xml");
+			pc = dao.LoadXml(@".\Data\players.xml");
 			if (pc != null)
 			{
 				foreach (PlayerEt player in pc.list)
@@ -71,7 +71,7 @@ namespace MinecraftCommandController.Util
 				pc.list.Add(player);
 			}
 			PlayerDao dao = new PlayerDao();
-			dao.SaveXml(pc, @"player.xml");
+			dao.SaveXml(pc, @".\Data\players.xml");
 		}
 
 		private void button4_Click(object sender, EventArgs e)

@@ -9,5 +9,10 @@ namespace MinecraftCommandController.Entities
 		public PlayerCollectionEt()
 		{
 		}
+
+		public PlayerCollectionEt(List<PlayerEt> list)
+		{
+			this.list = list;
+		}
 	}
 }

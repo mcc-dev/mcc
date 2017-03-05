@@ -2,7 +2,7 @@
 
 using MinecraftCommandController.Base;
 
-namespace MinecraftCommandController.Minecraft
+namespace MinecraftCommandController.Contents.Minecraft
 {
 	public partial class McTeleport : MccContentPageBase
 	{
