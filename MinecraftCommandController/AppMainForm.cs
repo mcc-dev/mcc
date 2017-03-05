@@ -18,6 +18,7 @@ namespace MinecraftCommandController
 		private McGameMode mcGameMode;
 		private McTeleport mcTeleport;
 		private McEffect mcEffect;
+		private McGameRule mcGameRule;
 		private SkList skList;
 		private Dictionary<string, Dictionary<string, MccContentPageBase>> dicTools;
 		private Dictionary<string, MccContentPageBase> dicMinecraft;
@@ -59,6 +60,11 @@ namespace MinecraftCommandController
 			mcEffect.Visible = false;
 			panel2.Controls.Add(mcEffect);
 			dicMinecraft.Add("エフェクト", mcEffect);
+			//Minecraft.McGameRule
+			mcGameRule = new McGameRule(this);
+			mcGameRule.Visible = false;
+			panel2.Controls.Add(mcGameRule);
+			dicMinecraft.Add("ゲームルール", mcGameRule);
 
 			//Skript.McList
 			skList = new SkList(this);

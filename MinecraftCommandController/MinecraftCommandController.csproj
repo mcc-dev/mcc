@@ -100,9 +100,18 @@
     <Compile Include="Contents\Minecraft\McEffect.Designer.cs">
       <DependentUpon>McEffect.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contents\Minecraft\McGameRule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contents\Minecraft\McGameRule.Designer.cs">
+      <DependentUpon>McGameRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Daos\GameRuleDao.cs" />
     <Compile Include="Daos\EffectDao.cs" />
     <Compile Include="Daos\PlayerDao.cs" />
+    <Compile Include="Entities\GameRuleCollectionEt.cs" />
     <Compile Include="Entities\EffectCollectionEt.cs" />
+    <Compile Include="Entities\GameRuleEt.cs" />
     <Compile Include="Entities\PlayerCollectionEt.cs" />
     <Compile Include="Entities\EffectEt.cs" />
     <Compile Include="Entities\PlayerEt.cs" />
@@ -181,6 +190,9 @@
     <EmbeddedResource Include="Contents\Minecraft\McEffect.resx">
       <DependentUpon>McEffect.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contents\Minecraft\McGameRule.resx">
+      <DependentUpon>McGameRule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemTemplates\MccContentPage.resx">
       <DependentUpon>MccContentPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,7 +233,6 @@
     <EmbeddedResource Include="Util\PlayerSelectForm.resx">
       <DependentUpon>PlayerSelectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
